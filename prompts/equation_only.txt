@@ -1,0 +1,13 @@
+Inspired by: Wei et al., “No verbal explanation” ablation (Section 3.4)
+
+Look at this image and describe what is happening using only short, factual visual observations. Do not explain your reasoning — just write what you see.
+
+Observation 1:
+
+🧠 This will likely generate concise factual statements without justification:
+
+Observation 1: Woman.
+Observation 2: Wearing a stethoscope.
+Observation 3: Standing next to a patient.
+Final caption: Doctor talking to a patient.
+
