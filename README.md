@@ -66,9 +66,69 @@ We aim to answer three focused questions:
 
 ---
 
-## ✅ Next Steps
+# 🧠 Multimodal CoT Evaluation — Project Tracker
 
-- [ ] Finalize 3–4 CoT prompt templates (`prompts/*.txt`)
-- [ ] Build `test_cases.csv` with 50 images × 3 prompts
-- [ ] Implement `run_inference.py` for each model
-- [ ] Generate and organize outputs in `generated_outputs/`
+---
+
+## ✅ Setup & Scope Definition
+
+- ✅ Finalized research question & model list (GPT-4V, DeepSeek-VL, BLIP-2)
+- ✅ Chose 3 CoT prompt formats (Stepwise, Visual-first, Contrastive)
+- ✅ Defined evaluation framework (Accuracy, Reasoning, Confidence)
+- ✅ Decided on 50 total images, reused for all formats
+- ✅ Dropped Modular and Meta from experiment scope
+- ✅ Finalized label system (2 = Good, 1 = Partial, 0 = Bad)
+- ✅ Decided on manual dual annotation + Cohen’s Kappa
+
+---
+
+## 📅 This Week’s Goals
+
+### 📅 April 22 (Tue)
+- 📅 Start image picking (no pressure to finish)
+
+### 📅 April 23 (Wed)
+- 📅 Finalize 50 image selection
+- 📅 Create 25 contrastive pairs from 50 images
+- 📅 Write 50 Stepwise prompts
+- 📅 Write 50 Visual-first prompts
+- 📅 Write 25 Contrastive prompts
+- 📅 Build `test_cases.csv` with all [image × prompt structure] entries
+
+### 📅 April 24 (Thu)
+- 📅 Deploy and test GPT-4V
+- 📅 Deploy and test DeepSeek-VL
+- 📅 Deploy and test BLIP-2
+- 📅 Sync with Xinyu (first full project discussion)
+
+### 📅 April 25 (Fri)
+- 📅 Begin running prompts across all models
+- 📅 Save outputs to `generated_outputs/`
+- 📅 Begin logging progress into `progress_log.md`
+
+---
+
+## ⬜ Next Week & Beyond
+
+### ⬜ Evaluation Phase
+- ⬜ Create scoring templates (per rater)
+- ⬜ Annotate all 375 outputs (2 raters)
+- ⬜ Calculate Cohen’s Kappa per dimension
+- ⬜ Merge and finalize final `eval_results.csv`
+
+### ⬜ Analysis & Writeup
+- ⬜ Aggregate accuracy + reasoning scores
+- ⬜ Select strong/weak example outputs
+- ⬜ Create bar/line/pie charts per structure & model
+- ⬜ Draft results summary + discussion insights
+
+### ⬜ Final Report Polish
+- ⬜ Insert results into report
+- ⬜ Write final conclusion
+- ⬜ Add appendix: prompts, eval rubric, sample outputs
+
+### ⬜ Presentation Prep
+- ⬜ Create slide deck
+- ⬜ Design per-structure summary visuals
+- ⬜ Rehearse walkthrough with Xinyu
+
