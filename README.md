@@ -1,138 +1,90 @@
-# 🧠 CoT-Caption: Studying Chain-of-Thought Structures in Vision-Language Models
+# 🧠 Prompting for Chemical Reasoning: A Comparative Study of Chain-of-Thought Structures in Vision-Language Models
 
 ---
 
-## 📌 Project Overview
+## 🌟 Overview
 
-This project investigates how **Chain-of-Thought (CoT) prompting structures** affect the reasoning behavior of vision-language models (VLMs) in image captioning tasks.  
-Rather than modifying models or datasets, we perform a **comparative case study** using prompt-only methods to test how different CoT styles influence:
+This project investigates how **different Chain-of-Thought (CoT) prompt structures** influence reasoning behavior in **vision-language models** when applied to structured scientific images. We focus on a chemically grounded question:
 
-- Caption **accuracy**
-- Expression of **uncertainty**
-- Perceived **persuasiveness or trustworthiness**
+> **“Which compound is more reactive, and why?”**
 
----
-
-## 🎯 Research Objectives
-
-We aim to answer three focused questions:
-
-1. **Structure Effect**  
-   Which CoT structure (e.g., stepwise, visual-first, contrastive) yields the most effective model performance?
-
-2. **Uncertainty Calibration**  
-   Does CoT help models express uncertainty in a more appropriate, calibrated way?
-
-3. **Accuracy vs. Persuasiveness**  
-   Does CoT improve factual correctness — or just make the model *sound* more confident and convincing?
+By comparing models like **GPT-4V** and **BLIP-2**, we aim to understand how CoT structures impact accuracy, reasoning clarity, and cross-model generality in tasks that require multimodal understanding and logical inference.
 
 ---
 
-## 🧪 Methodology Summary
+## 🎯 Research Questions
 
-- **50 total images**, reused across all prompt formats
-- **4 prompt structures** per image:
-  - Stepwise (explicit “Let’s think step by step”)
-  - Visual-first (starts with scene observation)
-  - Contrastive (image pairs)
-  - Baseline (no CoT guidance)
-- **3 models**:
-  - `GPT-4V`
-  - `DeepSeek-VL`
-  - `BLIP-2`
-- **175 prompts total × 3 models = 525 outputs**
-- Prompting is performed in **stateless, one-shot sessions**
-- Outputs are evaluated using **manual dual annotation**
+1. **Model-Specific Effectiveness**  
+   Which CoT prompt structures improve reasoning and accuracy for each model?
+
+2. **Cross-Model Generality**  
+   Are there CoT formats that generalize well across different architectures?
+
+3. **Task-Specific Optimization**  
+   Can we identify a single “best” CoT prompt for chemical reactivity reasoning?
 
 ---
 
-## ⚙️ Models Used
+## 🔍 Task Design
 
-| Model | Type | Notes |
-|-------|------|-------|
-| `BLIP-2` (`Salesforce/blip2-flan-t5-xl`) | Open-source | Controlled baseline model |
-| `DeepSeek-VL` | Open-source | Chat-style VLM |
-| `GPT-4V` | Proprietary | Oracle-quality multimodal reasoning |
+- **Input**: Side-by-side visual representations of molecular structures (e.g., SMILES-based 2D diagrams)
+- **Output**: Natural language answer to:  
+  > *“Which compound is more reactive? Explain your reasoning.”*
 
----
-
-## 🛠️ Evaluation Metrics
-
-| Metric | Description |
-|--------|-------------|
-| ✅ **Accuracy** (0–2) | Final answer correctness |
-| ✅ **Reasoning Quality** (0–2) | Step coherence, justification |
-| ✅ **Confidence Expression** (0–2) | Explicit uncertainty vs overconfidence |
-| ✅ **Persuasiveness** (0–2) | How convincing the output sounds, regardless of correctness |
-| ✅ **Cohen’s Kappa** | Inter-rater agreement for all scores |
-| 🟡 *(Optional)* CLIPScore, BERTScore | Caption similarity metrics (TBD) |
-
-All evaluations are logged in a shared scoring sheet with matching image IDs and prompt types.
+- **Data**: 50 curated image pairs with known reactivity differences (based on functional groups, resonance, etc.)
+- **Ground Truth**: Expert-labeled chemical rationale (non-ambiguous)
 
 ---
 
-## 🧪 Annotation Procedure
+## 🧱 Chain-of-Thought Structures Evaluated
 
-- Two annotators independently label each model output
-- Labels are:
-  - Accuracy: `Incorrect (0)`, `Partial (1)`, `Correct (2)`
-  - Reasoning Quality: `Hallucinated`, `Incomplete`, `Clear & Justified`
-  - Confidence: `Explicitly Uncertain`, `Hedged`, `Confident`
-  - Persuasiveness: `Unconvincing`, `Somewhat convincing`, `Very persuasive`
-- Final scores are merged and agreement is measured using **Cohen’s Kappa**
+We define and test the following CoT prompt families:
 
----
-
-## ⏳ Milestones
-
-| # | Task | Description |
-|--|------|-------------|
-| 1 | Project Setup | Define objectives and evaluation plan |
-| 2 | Prompt Structure Design | Write 4 prompt types (incl. baseline) |
-| 3 | Image Set Creation | Curate 50 diverse images and pairings |
-| 4 | Model Execution | Run all models across 175 prompts |
-| 5 | Manual Annotation | Score 525 outputs across 4 dimensions |
-| 6 | Analysis & Reporting | Aggregate findings, finalize report |
+| Structure Type       | Prompt Style Description                                 |
+|----------------------|----------------------------------------------------------|
+| **Stepwise**         | “Let’s think step by step...”                            |
+| **Visual-first**     | “Looking at the molecular structure, we observe...”      |
+| **Explanation-first**| “Compound A is more reactive. This is because…”          |
+| **Contrastive**      | “Compared to B, compound A has features that…”           |
+| **Baseline (no CoT)**| Direct answer with no reasoning guidance                 |
 
 ---
 
-# 🚦 Multimodal CoT Evaluation — Project Tracker
+## 🧪 Models Tested
 
-## ✅ Setup & Scope
+- **GPT-4V** (OpenAI)
+- **BLIP-2** (Salesforce)
+- *(Optional: DeepSeek-VL)*
 
-- ✅ Finalized research question and model list
-- ✅ Selected 3 CoT structures + 1 baseline
-- ✅ Evaluation framework: accuracy, reasoning, confidence, persuasiveness
-- ✅ Dual annotation setup + Cohen’s Kappa
-- ✅ All known biases (randomness, meta exposure) acknowledged
+Each model is evaluated with every CoT prompt across all 50 image pairs.
 
 ---
 
-## 📅 This Week’s Plan
+## 📈 Evaluation Metrics
 
-| Date | Task |
-|------|------|
-| Apr 22 | Start image picking (no pressure to finish) |
-| Apr 23 | Finalize 50 images and 25 contrastive pairs; Write 150 CoT prompts |
-| Apr 24 | Deploy + test all 3 models; sync with Xinyu |
-| Apr 25 | Start running all prompts across models and logging outputs |
+- **Answer Accuracy** (vs. ground truth)
+- **Reasoning Quality** (logic, fluency — scored manually or via GPT-judge)
+- **Cross-Model Consistency**
+- **Failure Modes and Error Categories**
 
 ---
 
-## 🔜 Next Week & Beyond
+## 📊 Expected Deliverables
 
-### ⬜ Evaluation
-- ⬜ Create scoring templates for both annotators
-- ⬜ Annotate all 525 outputs (manual)
-- ⬜ Calculate Cohen’s Kappa for each score type
+- 📘 **Per-Model CoT Performance Table**
+- 🔄 **Cross-Model Comparison Matrix**
+- 🧪 **Recommended Prompt for This Task**
+- 💬 **Annotated Justification Examples**
+- 🔍 **Failure Analysis Summary**
+- 🧠 **Prompting Insights for Future Research**
 
-### ⬜ Analysis
-- ⬜ Compute accuracy vs confidence patterns
-- ⬜ Analyze persuasiveness vs correctness
-- ⬜ Extract standout examples + trends
-- ⬜ Create visualizations (bar/pie/line charts)
+---
 
-### ⬜ Report & Presentation
-- ⬜ Finalize LaTeX report
-- ⬜ Add appendix: image list, rubric, prompt examples
-- ⬜ Build slide deck for final presentation
+## 💬 Sample Prompt Format (Visual-first)
+
+```text
+Question: Which compound is more reactive, and why?
+
+Visual-first Prompt:
+Looking at the molecular structure, we observe that Compound A contains a carboxylic acid group while Compound B has an alcohol group. Carboxylic acids are more reactive due to resonance stabilization of their conjugate base. Therefore, Compound A is more reactive.
+```
