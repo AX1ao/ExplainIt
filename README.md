@@ -1,9 +1,5 @@
 # 🧠 Prompting for Chemical Reasoning: A Comparative Study of Chain-of-Thought Structures in Vision-Language Models
 
-### 🔬 NYU LLVM Final Project · Spring 2025  
-**Authors:** Ann Yuanyao Xiao & Xinyu Li  
-**Repo:** [GitHub link here]
-
 ---
 
 ## 🌟 Overview
@@ -91,4 +87,4 @@ Question: Which compound is more reactive, and why?
 
 Visual-first Prompt:
 Looking at the molecular structure, we observe that Compound A contains a carboxylic acid group while Compound B has an alcohol group. Carboxylic acids are more reactive due to resonance stabilization of their conjugate base. Therefore, Compound A is more reactive.
-
+```
