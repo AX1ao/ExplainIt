@@ -1,0 +1,14 @@
+Inspired by: Wei et al. "Let's think step by step." (Figure 1)
+
+Look at this image and describe what is happening by reasoning step by step.
+
+Step 1:
+
+
+
+🧠 This will produce classic CoT outputs like:
+
+Step 1: The person is wearing a white coat.
+Step 2: They are using scientific tools.
+Therefore: The person is likely a scientist working in a lab.
+
