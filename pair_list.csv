@@ -1,0 +1,42 @@
+Category,PairID,Molecule1_File,Molecule2_File,Molecule1_Name,Molecule2_Name,Notes,Ready
+EAS,EAS01,Aniline.png,Nitrobenzene.png,Aniline,Nitrobenzene,Activator vs Deactivator,Y
+EAS,EAS02,Benzene.png,Toluol.png,Benzene,Toluene,Methyl activates,Y
+EAS,EAS03,Benzaldehyde.png,Benzoesäure.png,Benzaldehyde,Benzoic Acid,EWG strength difference,Y
+EAS,EAS04,Pyridine-full.png,Benzene.png,Pyridine,Benzene,N-heterocycle vs benzene,Y
+EAS,EAS05,Pyrrole-full.png,Benzene.png,Pyrrole,Benzene,Activated 5-ring vs benzene,Y
+EAS,EAS06,Phenol.png,Benzene.png,Phenol,Benzene,OH activating,Y
+EAS,EAS07,Salicylic-acid.png,Benzoesäure.png,Salicylic Acid,Benzoic Acid,OH + COOH combined effects,Y
+EAS,EAS08,Nitrobenzene.png,Ozone.png,Nitrobenzene,Ozone,Extreme deactivator vs oxidant,Y
+EAS,EAS09,Pyrrole-numbered.png,Pyridine_numbers.png,Pyrrole,Pyridine,Reactivity comparison in EAS,Y
+EAS,EAS10,Morphine.png,Caffeine.png,Morphine,Caffeine,Heterocycles in bioactive molecules,Y
+AcidBase,AB01,Benzoesäure.png,Phenol2.png,Benzoic Acid,Phenol,Carboxyl stronger than hydroxyl,Y
+AcidBase,AB02,Formic_acid.png,Acetic-acid.png,Formic Acid,Acetic Acid,Acid strength by chain length,Y
+AcidBase,AB03,Ammonia.png,MeNH2.png,Ammonia,Methylamine,Basicity shift with alkyl,Y
+AcidBase,AB04,Cytosine.png,Adenine.png,Cytosine,Adenine,Nucleobase basicity,Y
+AcidBase,AB05,H2O.png,Methanol.png,Water,Methanol,Water vs alcohol acidity,Y
+AcidBase,AB06,Caffeine.png,Morphine.png,Caffeine,Morphine,Basic nitrogens,Y
+AcidBase,AB07,Ibuprofen.png,Salicylic-acid.png,Ibuprofen,Salicylic Acid,Acid strength comparison,Y
+AcidBase,AB08,Imidazole_full.png,Pyridine-full.png,Imidazole,Pyridine,Heterocycle basicity,Y
+AcidBase,AB09,Nicotinamid.png,Histamine.png,Nicotinamide,Histamine,Amide vs amine basicity,Y
+AcidBase,AB10,Purine.png,Uracil.png,Purine,Uracil,Nucleobase acidity,Y
+SN1SN2,SN01,MeNH2.png,Ammonia.png,Methylamine,Ammonia,Better nucleophile,Y
+SN1SN2,SN02,Ethanol.png,Methanol.png,Ethanol,Methanol,Steric hindrance effect,Y
+SN1SN2,SN03,Methane.png,Methanol.png,Methane,Methanol,No nucleophile vs weak nucleophile,Y
+SN1SN2,SN04,Pyridine_numbers.png,Pyrrole-numbered.png,Pyridine,Pyrrole,N lone pair availability,Y
+SN1SN2,SN05,Imidazole_numbered.png,Pyridine_numbers.png,Imidazole,Pyridine,Better nucleophile comparison,Y
+SN1SN2,SN06,Morphine.png,Caffeine.png,Morphine,Caffeine,Complex N nucleophiles,Y
+SN1SN2,SN07,Nicotinamid.png,Histamine.png,Nicotinamide,Histamine,N lone pair nucleophilicity,Y
+SN1SN2,SN08,Imidazole_full.png,Pyridine-full.png,Imidazole,Pyridine,Neutral N nucleophilicity,Y
+SN1SN2,SN09,Cytosine.png,Adenine.png,Cytosine,Adenine,Nucleobase attackability,Y
+SN1SN2,SN10,Acetic-acid.png,Formic_acid.png,Acetic Acid,Formic Acid,Weak substitution ability,Y
+FunctionalGroups,FG01,Ibuprofen.png,Salicylic-acid.png,Ibuprofen,Salicylic Acid,Group influence on reactivity,Y
+FunctionalGroups,FG02,Acetic-acid.png,Benzoesäure.png,Acetic Acid,Benzoic Acid,Chain vs ring reactivity,Y
+FunctionalGroups,FG03,Histamine.png,Nicotinamid.png,Histamine,Nicotinamide,Amine vs amide reactivity,Y
+FunctionalGroups,FG04,Cyclohexane.png,Benzene.png,Cyclohexane,Benzene,Saturation vs aromaticity,Y
+FunctionalGroups,FG05,Paracetamol.png,Morphine.png,Paracetamol,Morphine,Phenol groups reactivity,Y
+FunctionalGroups,FG06,Methanol.png,Ethanol.png,Methanol,Ethanol,Small changes in alcohols,Y
+FunctionalGroups,FG07,Pyrrole-full.png,Pyridine-full.png,Pyrrole,Pyridine,Heterocyclic comparison,Y
+FunctionalGroups,FG08,Ozone.png,Nitrobenzene.png,Ozone,Nitrobenzene,Extreme oxidant vs EWG,Y
+FunctionalGroups,FG09,Cytosine.png,Uracil.png,Cytosine,Uracil,Nucleobase functional groups,Y
+FunctionalGroups,FG10,Furan-full.png,Thiophene-full.png,Furan,Thiophene,O vs S heterocyclic reactivity,Y
+
