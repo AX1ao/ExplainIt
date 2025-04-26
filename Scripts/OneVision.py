@@ -4,7 +4,11 @@ Batch Inference for Molecule Identification Tasks
 (18 Images × 4 Prompts) using Llava-OneVision
 """
 
+import sys
+sys.path.insert(0, '/scratch/yx3493/llava_libs')
 import os
+os.environ["TRITON_CACHE_DIR"] = "/scratch/yx3493/.triton_cache"
+os.environ["HF_HOME"] = "/scratch/yx3493/.hf_cache"
 import csv
 from transformers import BitsAndBytesConfig, LlavaOnevisionForConditionalGeneration, LlavaOnevisionProcessor
 from PIL import Image
@@ -28,7 +32,7 @@ processor = LlavaOnevisionProcessor.from_pretrained("llava-hf/llava-onevision-qw
 processor.tokenizer.padding_side = "left"
 
 # --- Step 2: Set Dataset Folder ---
-dataset_folder = "dataset"  # relative path to your dataset folder
+dataset_folder = "0_Identify"  # relative path to your dataset folder
 image_filenames = [os.path.join(dataset_folder, fname) for fname in os.listdir(dataset_folder) if fname.lower().endswith(('.png', '.jpg', '.jpeg'))]
 image_filenames.sort()  # sort alphabetically
 
@@ -84,7 +88,7 @@ for img_path in image_filenames:
         })
 
 # --- Step 5: Save Results to CSV ---
-output_csv = "OneVision_ID_outputs.csv"
+output_csv = "OneVisionID_outputs.csv"
 with open(output_csv, mode="w", newline='', encoding="utf-8") as csvfile:
     fieldnames = ["image", "prompt_number", "prompt_text", "generated_text"]
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
