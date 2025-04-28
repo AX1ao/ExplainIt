@@ -1,90 +1,56 @@
-# 🧠 Prompting for Chemical Reasoning: A Comparative Study of Chain-of-Thought Structures in Vision-Language Models
+# 📄 Project Objectives
 
----
+The goal of this project is to systematically evaluate the impact of Chain-of-Thought (CoT) prompting structures on the performance of state-of-the-art vision-language models in chemistry-focused reasoning tasks. Specifically, we aim to:
 
-## 🌟 Overview
+- **Compare model performance** across three modern multimodal models — **LLaVA-OneVision**, **Microsoft LLaVA-Med**, and **DeepSeek-VL** — on a curated set of molecule-related image tasks.
+- **Assess the effectiveness of CoT prompting** by testing three distinct CoT structures alongside a baseline (no CoT) for each task.
+- **Analyze task difficulty and model robustness** by covering five types of chemistry reasoning tasks, ranging from simple molecule identification to complex mechanistic predictions.
+- **Quantitatively evaluate outputs** using a standardized scoring rubric (0 = incorrect, 1 = partially correct, 2 = correct), enabling consistent cross-model and cross-task comparisons.
+- **Identify trends** in how different models and prompting strategies affect reasoning quality, factual accuracy, and error patterns in chemistry-specific contexts.
 
-This project investigates how **different Chain-of-Thought (CoT) prompt structures** influence reasoning behavior in **vision-language models** when applied to structured scientific images. We focus on a chemically grounded question:
+# 📄 Expected Deliverables
 
-> **“Which compound is more reactive, and why?”**
+By the end of the project, we expect to deliver:
 
-By comparing models like **GPT-4V** and **BLIP-2**, we aim to understand how CoT structures impact accuracy, reasoning clarity, and cross-model generality in tasks that require multimodal understanding and logical inference.
+- **Prompt Set:**  
+  A refined set of baseline and CoT prompts tailored for five molecule-related reasoning tasks.
 
----
+- **Inference Results:**  
+  Model outputs for every combination of model, task, and prompting style, organized systematically.
 
-## 🎯 Research Questions
+- **Graded Dataset:**  
+  Human-annotated scores (0/1/2) for all outputs, indicating the correctness of each model's reasoning.
 
-1. **Model-Specific Effectiveness**  
-   Which CoT prompt structures improve reasoning and accuracy for each model?
+- **Data Analysis Report:**  
+  - Statistical summaries of model accuracy across different tasks and prompt structures.
+  - Comparative analysis identifying which CoT structures (if any) significantly improve model performance.
+  - Observations on task difficulty trends and model-specific strengths and weaknesses.
 
-2. **Cross-Model Generality**  
-   Are there CoT formats that generalize well across different architectures?
+- **Discussion of Findings:**  
+  A high-level interpretation of the results, including insights into:
+  - The role of CoT prompting in multimodal scientific reasoning.
+  - Model-specific behaviors and failure modes.
+  - Recommendations for future prompt engineering in chemical and scientific domains.
 
-3. **Task-Specific Optimization**  
-   Can we identify a single “best” CoT prompt for chemical reactivity reasoning?
+# ✅ Summary of Setup
 
----
+## Models:
+- LLaVA-OneVision
+- Microsoft LLaVA-Med
+- DeepSeek-VL
 
-## 🔍 Task Design
+## Tasks (per model):
+- **Task 0:** Identify molecule (baseline)
+- **Task 1:** EAS (Electrophilic Aromatic Substitution prediction)
+- **Task 2:** Acid/Base analysis
+- **Task 3:** Functional group identification
+- **Task 4:** SN1/SN2 mechanism prediction
 
-- **Input**: Side-by-side visual representations of molecular structures (e.g., SMILES-based 2D diagrams)
-- **Output**: Natural language answer to:  
-  > *“Which compound is more reactive? Explain your reasoning.”*
+## Prompt types:
+- Baseline (no CoT)
+- 3 CoT styles (Stepwise, Visual-first, Explanation-first)
 
-- **Data**: 50 curated image pairs with known reactivity differences (based on functional groups, resonance, etc.)
-- **Ground Truth**: Expert-labeled chemical rationale (non-ambiguous)
-
----
-
-## 🧱 Chain-of-Thought Structures Evaluated
-
-We define and test the following CoT prompt families:
-
-| Structure Type       | Prompt Style Description                                 |
-|----------------------|----------------------------------------------------------|
-| **Stepwise**         | “Let’s think step by step...”                            |
-| **Visual-first**     | “Looking at the molecular structure, we observe...”      |
-| **Explanation-first**| “Compound A is more reactive. This is because…”          |
-| **Contrastive**      | “Compared to B, compound A has features that…”           |
-| **Baseline (no CoT)**| Direct answer with no reasoning guidance                 |
-
----
-
-## 🧪 Models Tested
-
-- **GPT-4V** (OpenAI)
-- **BLIP-2** (Salesforce)
-- *(Optional: DeepSeek-VL)*
-
-Each model is evaluated with every CoT prompt across all 50 image pairs.
-
----
-
-## 📈 Evaluation Metrics
-
-- **Answer Accuracy** (vs. ground truth)
-- **Reasoning Quality** (logic, fluency — scored manually or via GPT-judge)
-- **Cross-Model Consistency**
-- **Failure Modes and Error Categories**
-
----
-
-## 📊 Expected Deliverables
-
-- 📘 **Per-Model CoT Performance Table**
-- 🔄 **Cross-Model Comparison Matrix**
-- 🧪 **Recommended Prompt for This Task**
-- 💬 **Annotated Justification Examples**
-- 🔍 **Failure Analysis Summary**
-- 🧠 **Prompting Insights for Future Research**
-
----
-
-## 💬 Sample Prompt Format (Visual-first)
-
-```text
-Question: Which compound is more reactive, and why?
-
-Visual-first Prompt:
-Looking at the molecular structure, we observe that Compound A contains a carboxylic acid group while Compound B has an alcohol group. Carboxylic acids are more reactive due to resonance stabilization of their conjugate base. Therefore, Compound A is more reactive.
-```
+## Scoring rubric:
+- 0 = Wrong
+- 1 = Partially correct
+- 2 = Fully correct
