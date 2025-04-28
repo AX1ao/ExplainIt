@@ -54,3 +54,39 @@ By the end of the project, we expect to deliver:
 - 0 = Wrong
 - 1 = Partially correct
 - 2 = Fully correct
+
+## Folder Structure:
+
+```
+.
+├── Dataset/
+│   ├── 0_Identify/
+│   ├── Task1/
+│   :
+│   :── store [.png] molecule structure images
+│   :
+│   ├── *.png (additional molecule images)
+│   └── difficulty of telling the compounds.txt
+├── Results/
+│   ├── Task0/
+│   :
+│   :── store [outputs.csv] and [eval.md] files
+│   :
+│   └── Task4/
+├── Scripts/
+│   ├── Task0/
+│   :
+│   :── store [run_tasks.py] and [finetune_prompts.py] files
+│   :
+│   └── Task4/
+├── Task_Definitions/
+│   ├── 0_Identify.md
+│   :
+│   :── store [tasks.md] files for task definitions + chosen [prompts + images]
+│   :
+│   ├── 4_SN1SN2.md
+│   ├── meta.csv
+│   └── pair_list.csv
+├── .gitignore
+└── README.md
+```
