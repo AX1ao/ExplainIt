@@ -15,7 +15,8 @@ These are easily recognizable, with very simple atomic structures:
 - Propane
 - Butane
 
-##Tier 3 – Moderate (Rings and common aromatics)
+## Tier 3 – Moderate (Rings and common aromatics)
+
 - Benzene
 - Phenol
 - Toluol
@@ -40,7 +41,8 @@ These are easily recognizable, with very simple atomic structures:
 - Aspartame
 - Histamine
 
-Tier 5 – Very Hard (Fused rings, nucleobases, steroids)
+## Tier 5 – Very Hard (Fused rings, nucleobases, steroids)
+
 Adenine
 Guanin
 Cytosine
