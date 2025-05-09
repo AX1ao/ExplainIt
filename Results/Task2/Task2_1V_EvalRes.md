@@ -1,3 +1,9 @@
+# 🧠 Task 2 (Acid-Base Strength Prediction)
+
+---
+
+## 📋 Overall CoT Evaluation Results
+
 | Image1              | Image2              | Prompt Type       | Model Answer (Summary)                                                                 | Accuracy |
 |---------------------|---------------------|-------------------|----------------------------------------------------------------------------------------|----------|
 | Benzoic_acid.png    | Phenol.png          | Baseline          | Correctly identifies benzoic acid as more acidic due to carboxylic group              | 2        |
