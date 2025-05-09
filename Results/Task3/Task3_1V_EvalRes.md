@@ -57,8 +57,8 @@
 
 | Accuracy Level | Baseline | Stepwise | Visual-first | Explanation-first |
 |----------------|----------|----------|---------------|-------------------|
-| 2 (Correct)    | 4        | 9        | 1             | 9                 |
-| 1 (Partial)    | 5        | 1        | 7             | 6                 |
+| 2 (Correct)    | 4        | 9        | 1             | 7                 |
+| 1 (Partial)    | 5        | 1        | 7             | 3                 |
 | 0 (Wrong)      | 1        | 0        | 2             | 0                 |
 
 ---
