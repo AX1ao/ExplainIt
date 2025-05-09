@@ -66,7 +66,7 @@
 ## ✅ Success Rate (Score = 2)
 
 ### 📐 Formula
-`Success/Failure Rate = (Number of responses scored 2 or 0) / (Total number of responses for that prompt type) × 100%`
+`Success (Failure) Rate = (Number of responses scored 2 (or 0)) / (Total number of responses for that prompt type) × 100%`
 
 ---
 
