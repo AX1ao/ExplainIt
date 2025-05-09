@@ -46,3 +46,118 @@
 | Purine.png          | Uracil.png          | Stepwise          | Describes ring structure and basicity; favors purine                                  | 2        |
 | Purine.png          | Uracil.png          | Visual_first      | Notes ring N count; hesitant call                                                     | 1        |
 | Purine.png          | Uracil.png          | Explanation_first | Correctly explains aromaticity + lone pairs; favors purine                            | 2        |
+
+---
+
+# 🧪 Overview
+
+## 📈 Accuracy Summary
+
+| Accuracy Level | Baseline | Stepwise | Visual-first | Explanation-first |
+|----------------|----------|----------|---------------|-------------------|
+| 2 (Correct)    | 4        | 9        | 1             | 9                 |
+| 1 (Partial)    | 5        | 3        | 7             | 4                 |
+| 0 (Wrong)      | 1        | 2        | 4             | 1                 |
+
+---
+
+# 🧠 General Observations
+
+## ✅ Success Rate (Score = 2)
+
+### 📐 Formula
+\[
+\text{Success/Failure Rate} = \frac{\text{Number of responses scored 2/0}}{\text{Total number of responses for that prompt type}} \times 100\%
+\]
+
+---
+
+### ✅ Success Rate Table
+
+| Prompt Type       | Formula | Result |
+|-------------------|---------|--------|
+| Baseline          | 4 / 10  | 40%    |
+| Stepwise          | 9 / 10  | 90%    |
+| Visual-first      | 1 / 10  | 10%    |
+| Explanation-first | 9 / 10  | 90%    |
+
+---
+
+### ❌ Failure Rate Table
+
+| Prompt Type       | Formula | Result |
+|-------------------|---------|--------|
+| Baseline          | 1 / 10  | 10%    |
+| Stepwise          | 2 / 10  | 20%    |
+| Visual-first      | 4 / 10  | 40%    |
+| Explanation-first | 1 / 10  | 10%    |
+
+---
+
+## 📊 Prompt Type Trends
+
+- **Baseline:** Performed best when the acid/base difference was textbook clear (e.g., benzoic vs phenol), but lacked depth in trickier comparisons. Often made vague, under-explained claims.
+- **Stepwise:** Most consistently accurate. It helped the model break down structural features and build a clear answer. Only weak when molecule function was very complex.
+- **Visual-first:** Struggled the most. Without chemical reasoning, most responses stayed observational or uncertain. Accuracy suffered unless visual difference was very obvious.
+- **Explanation-first:** On par with Stepwise in performance. These prompts triggered detailed reasoning, especially about electron effects, resonance, and lone pairs. Weak only when the model got lost in abstract language.
+
+## 🚨 Common Failure Modes
+
+- **Visual-first prompts** often produced vague atom/group descriptions with no real judgment.
+- **Caffeine vs Morphine** and **Nicotinamide vs Histamine** repeatedly confused the model due to complex, unfamiliar pharmacological structures.
+- Many **Baseline** responses gave correct guesses with no mechanistic justification.
+- Some **Stepwise** prompts collapsed into listing features without concluding.
+
+## 🏅 Best Performing Images
+
+- **Benzoic_acid vs Phenol**: All 4 prompts got it right with clear, confident reasoning.
+- **Formic_acid vs Acetic-acid** and **H2O vs Methanol**: Great performance especially from Stepwise and Explanation-first.
+- **Ibuprofen vs Salicylic-acid**: Clear advantage in salicylic acid, well picked up by multiple prompt types.
+
+## ❌ Worst Performing Images
+
+- **Caffeine vs Morphine**: All prompt types failed or hedged.
+- **Nicotinamide vs Histamine**: Multiple prompts gave no real analysis.
+- **Cytosine vs Adenine**: No strong reasoning, and only 1 correct-ish answer from 4 prompts.
+
+---
+
+# 🔍 Detailed Insights by Category
+
+## 1. Correct Identifications often involved:
+
+- Functional group comparisons (COOH vs OH)
+- Charge stabilization (resonance, inductive effects)
+- Clear reasoning steps or structured breakdown
+- References to electron-withdrawing/donating effects
+
+## 2. Partial Identifications were seen when:
+
+- The model made a correct pick but gave incomplete or vague justification
+- Prompts were more observational than analytical
+- Multiple factors were mentioned but not weighed properly
+
+## 3. Incorrect Identifications still included:
+
+- Descriptions without judgment (“X has a methyl group…” with no follow-up)
+- Focus on irrelevant features (e.g. brain receptors)
+- Mixing up acidity vs basicity, or not picking a side at all
+
+---
+
+# 🧾 Prompt Type Performance Summary
+
+| Prompt Type       | Strengths                                                                 | Weaknesses                                                                 |
+|-------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| **Baseline**      | Can land correct answers on familiar comparisons; simple structure helps  | Often lacks reasoning; guesses with vague or no justification              |
+| **Stepwise**      | Best overall performer; supports detailed, logical structure               | Sometimes lists features without reaching a conclusion                     |
+| **Visual-first**  | Useful only when structures are extremely distinct                        | Mostly observational, avoids conclusions, lacks chemical logic             |
+| **Explanation-first** | Triggers mechanistic and theoretical knowledge; strong on charge effects | Can ramble or drift when the chemistry is too abstract                     |
+
+---
+
+# 🪞 Final Reflection
+
+The results show that **structured prompts** like **Stepwise** and **Explanation-first** are far more effective at eliciting correct, reasoned chemical comparisons. **Baseline** works when the task is easy and familiar. **Visual-first**, while intuitive for multimodal reasoning, underperforms in chemistry tasks where internal reasoning, not appearance, determines reactivity.
+
+This evaluation confirms: for complex domain tasks like acid/base comparison, **prompt design matters more than model size** — and the right reasoning chain can unlock far better performance.
