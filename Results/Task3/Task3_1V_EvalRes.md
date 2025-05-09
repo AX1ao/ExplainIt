@@ -57,15 +57,13 @@
 
 | Accuracy Level | Baseline | Stepwise | Visual-first | Explanation-first |
 |----------------|----------|----------|---------------|-------------------|
-| 2 (Correct)    | 4        | 9        | 1             | 7                 |
-| 1 (Partial)    | 5        | 1        | 7             | 3                 |
-| 0 (Wrong)      | 1        | 0        | 2             | 0                 |
+| 2 (Correct)    | 0        | 7        | 0             | 7                 |
+| 1 (Partial)    | 7        | 3        | 7             | 3                 |
+| 0 (Wrong)      | 3        | 0        | 3             | 0                 |
 
 ---
 
 # 🧠 General Observations
-
-## ✅ Success Rate (Score = 2)
 
 ### 📐 Formula
 `Success (Failure) Rate = (Number of responses scored 2 (or 0)) / (Total number of responses for that prompt type) × 100%`
@@ -76,10 +74,10 @@
 
 | Prompt Type       | Formula | Result |
 |-------------------|---------|--------|
-| Baseline          | 4 / 10  | 40%    |
-| Stepwise          | 9 / 10  | 90%    |
-| Visual-first      | 1 / 10  | 10%    |
-| Explanation-first | 9 / 10  | 90%    |
+| Baseline          | 0 / 10  | 0%     |
+| Stepwise          | 7 / 10  | 70%    |
+| Visual-first      | 0 / 10  | 0%     |
+| Explanation-first | 7 / 10  | 70%    |
 
 ---
 
@@ -87,37 +85,43 @@
 
 | Prompt Type       | Formula | Result |
 |-------------------|---------|--------|
-| Baseline          | 1 / 10  | 10%    |
+| Baseline          | 3 / 10  | 30%    |
 | Stepwise          | 0 / 10  | 0%     |
-| Visual-first      | 2 / 10  | 20%    |
+| Visual-first      | 3 / 10  | 30%    |
 | Explanation-first | 0 / 10  | 0%     |
 
 ---
-
 ## 📊 Prompt Type Trends
 
-- **Baseline:** Tends to guess correctly in simpler comparisons but often lacks chemical justification. Best when structural difference is obvious.
-- **Stepwise:** Clearly the strongest performer. Its structure helped models apply electron-based logic (e.g., lone pair availability, resonance suppression).
-- **Visual-first:** Weakest performer again. Even with obvious visuals (e.g. O vs S), most responses stayed superficial.
-- **Explanation-first:** Matches Stepwise in accuracy. Triggered resonance, hybridization, and delocalization reasoning consistently.
+- **Baseline:** Never got a fully correct answer. Most responses were surface-level guesses without chemical reasoning. Only useful when the correct answer happened to be obvious.
+- **Stepwise:** Among the top performers with 70% accuracy. These prompts led the model to structure its analysis, often identifying correct trends in lone pair localization and hybridization.
+- **Visual-first:** Failed to produce a single fully correct answer. Even with obvious visual contrasts, the model stuck to neutral or hesitant language. Lacked any chemical insight.
+- **Explanation-first:** Matched Stepwise in correctness (7/10). Helped trigger discussions about resonance and delocalization, but occasionally veered into vague or verbose responses.
+
+---
 
 ## 🚨 Common Failure Modes
 
-- **Visual-first** prompts yielded low performance due to their observational-only nature.
-- Baseline prompts often landed correct conclusions but lacked clear mechanistic insight.
-- In a few tricky cases (e.g. benzoic acid vs benzaldehyde), some answers flipped the expected nucleophilicity trend due to misunderstanding electron-withdrawing groups.
+- **Visual-first** prompts consistently produced vague, observational content with no real conclusion.
+- **Baseline** prompts showed a strong tendency to guess, sometimes aligning with the correct answer, but lacked reliable chemical logic.
+- **Electron-withdrawing group effects** were misunderstood or ignored — notably in benzoic acid vs benzaldehyde.
+- Some **partially correct Stepwise and Explanation-first** responses over-described structures without concluding which was more nucleophilic.
+
+---
 
 ## 🏅 Best Performing Images
 
-- **Ammonia vs Methanol** and **MeNH₂ vs Aniline**: Nearly all prompt types got these right with solid reasoning.
-- **Furan vs Thiophene**: Multiple prompts discussed heteroatom electronegativity correctly.
-- **Histamine vs Imidazole**: Strong reasoning on lone pair accessibility by both Stepwise and Explanation-first.
+- **Ammonia vs Methanol** and **MeNH₂ vs Aniline**: Clear-cut differences allowed Stepwise and Explanation-first to excel.
+- **Furan vs Thiophene**: Strong contrast in heteroatom electronegativity was correctly used by Stepwise and Explanation-first.
+- **Histamine vs Imidazole**: Nucleophilic N site in histamine was consistently identified by both strong prompt types.
+
+---
 
 ## ❌ Worst Performing Images
 
-- **Benzaldehyde vs Benzoic acid**: Baseline and Visual-first both failed; few explanations accounted for carbonyl reactivity properly.
-- **Nicotinamide vs Purine**: All prompts gave vague or incorrect reasoning.
-- **Pyrrole vs Pyridine**: Baseline chose the wrong nucleophile; others were hesitant.
+- **Benzaldehyde vs Benzoic acid**: Baseline and Visual-first both failed. Few models explained carbonyl nucleophilicity or carboxyl suppression.
+- **Nicotinamide vs Purine**: All prompt types were hesitant or incorrect. Complex structure confused reasoning.
+- **Pyrrole vs Pyridine**: Baseline made an incorrect call; Visual-first and Explanation-first both hesitated despite clear trends in lone pair delocalization.
 
 ---
 
@@ -125,22 +129,22 @@
 
 ## 1. Correct Identifications often involved:
 
-- Discussing lone pair location (sp² vs sp³ vs conjugated)
-- Recognizing resonance or conjugation reducing nucleophilicity
-- Using electronegativity to compare O, N, and S atoms
-- Comparing substituent effects on reactivity
+- Step-by-step breakdown of reactive centers (e.g. lone pair availability, hybridization)
+- Recognition of resonance suppression (e.g. in aniline, phenol)
+- Electronegative atom comparisons (e.g. O vs S, N vs O)
+- Clear comparisons of sp² vs sp³ lone pair geometry
 
 ## 2. Partial Identifications were seen when:
 
-- The model chose correctly but didn’t explain why
-- It listed atom types or functional groups without mechanism
-- It hesitated or used hedging language (“might be more reactive”)
+- The model made a correct guess but failed to explain why
+- It described structural features (e.g. atom types) without interpretation
+- It hedged its language (“might be more reactive” or “likely”)
 
 ## 3. Incorrect Identifications still included:
 
-- Reversed logic (e.g., saying benzoic acid more nucleophilic than benzaldehyde)
-- Treating all heteroatoms as equally reactive
-- Ignoring delocalization or aromatic suppression
+- Choosing less nucleophilic species due to resonance misunderstanding
+- Assuming more atoms = more reactive (e.g. histamine logic in Baseline)
+- Using vague or irrelevant criteria (e.g. "simpler" or "bulkier")
 
 ---
 
@@ -148,16 +152,17 @@
 
 | Prompt Type       | Strengths                                                                 | Weaknesses                                                                 |
 |-------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| **Baseline**      | Quick, sometimes right on common-sense comparisons                        | Lacks explanation; cannot handle nuanced resonance or hybridization logic |
-| **Stepwise**      | Very strong on structural and mechanistic breakdown                       | Occasionally over-explains or loses momentum before reaching a conclusion |
-| **Visual-first**  | Picks up on obvious atom/group visuals                                    | Rarely applies electron logic or chemical rules                           |
-| **Explanation-first** | Brings in chemical principles like EN, hybridization, resonance           | Sometimes verbose; logic chain may drift if molecule is unfamiliar        |
+| **Baseline**      | Sometimes aligns with simple comparisons                                  | No correct answers; lacks chemical reasoning; guesses blindly              |
+| **Stepwise**      | Strong at guiding structured chemical logic (hybridization, resonance)    | Sometimes over-literal; partials happen when no clear conclusion is made   |
+| **Visual-first**  | Identifies obvious visual differences (atoms/groups)                      | 0 correct answers; lacks reactivity logic; only visual features            |
+| **Explanation-first** | Triggers deep reasoning (resonance, lone pairs, conjugation)             | Occasionally verbose or too abstract for unfamiliar molecules              |
 
 ---
 
 # 🪞 Final Reflection
 
-In nucleophilicity comparison, accuracy depends heavily on understanding **electron density and accessibility**, not just visual structure. Prompts that encouraged **mechanistic reasoning** (like Stepwise and Explanation-first) dramatically outperformed others, especially in comparisons involving **resonance suppression**, **heteroatom substitution**, or **conjugation**.
+In nucleophilicity comparisons, models can only succeed when the prompt scaffolds **chemical reasoning** — not just recognition. The complete failure of Visual-first and Baseline to produce correct answers highlights the **inadequacy of unstructured or shallow prompts**.
 
-Once again, we see that **prompt engineering is a decisive factor** in model performance. The success of Stepwise and Explanation-first prompts highlights how language structure can scaffold scientific thinking — even for complex molecular comparisons.
+Meanwhile, both **Stepwise and Explanation-first** successfully triggered discussions about lone pair localization, resonance suppression, and heteroatom effects — which are central to predicting nucleophilic strength.
 
+Ultimately, this task reaffirms that **prompt structure is not cosmetic** — it fundamentally alters how models think.
