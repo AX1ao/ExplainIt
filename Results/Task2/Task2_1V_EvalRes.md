@@ -55,9 +55,9 @@
 
 | Accuracy Level | Baseline | Stepwise | Visual-first | Explanation-first |
 |----------------|----------|----------|---------------|-------------------|
-| 2 (Correct)    | 4        | 9        | 1             | 9                 |
-| 1 (Partial)    | 5        | 3        | 7             | 4                 |
-| 0 (Wrong)      | 1        | 2        | 4             | 1                 |
+| 2 (Correct)    | 1        | 7        | 1             | 7                 |
+| 1 (Partial)    | 6        | 2        | 6             | 3                 |
+| 0 (Wrong)      | 3        | 1        | 3             | 0                 |
 
 ---
 
@@ -74,49 +74,53 @@
 
 | Prompt Type       | Formula | Result |
 |-------------------|---------|--------|
-| Baseline          | 4 / 10  | 40%    |
-| Stepwise          | 9 / 10  | 90%    |
+| Baseline          | 1 / 10  | 10%    |
+| Stepwise          | 7 / 10  | 70%    |
 | Visual-first      | 1 / 10  | 10%    |
-| Explanation-first | 9 / 10  | 90%    |
-
----
+| Explanation-first | 7 / 10  | 70%    |
 
 ### ❌ Failure Rate Table
 
 | Prompt Type       | Formula | Result |
 |-------------------|---------|--------|
-| Baseline          | 1 / 10  | 10%    |
-| Stepwise          | 2 / 10  | 20%    |
-| Visual-first      | 4 / 10  | 40%    |
-| Explanation-first | 1 / 10  | 10%    |
+| Baseline          | 3 / 10  | 30%    |
+| Stepwise          | 1 / 10  | 10%    |
+| Visual-first      | 3 / 10  | 30%    |
+| Explanation-first | 0 / 10  | 0%     |
 
 ---
 
 ## 📊 Prompt Type Trends
 
-- **Baseline:** Performed best when the acid/base difference was textbook clear (e.g., benzoic vs phenol), but lacked depth in trickier comparisons. Often made vague, under-explained claims.
-- **Stepwise:** Most consistently accurate. It helped the model break down structural features and build a clear answer. Only weak when molecule function was very complex.
-- **Visual-first:** Struggled the most. Without chemical reasoning, most responses stayed observational or uncertain. Accuracy suffered unless visual difference was very obvious.
-- **Explanation-first:** On par with Stepwise in performance. These prompts triggered detailed reasoning, especially about electron effects, resonance, and lone pairs. Weak only when the model got lost in abstract language.
+- **Baseline:** Never produced a fully correct answer. At best, it guessed correctly with no reasoning. Most responses were vague or off-topic, especially in complex molecule comparisons.
+- **Stepwise:** A strong performer (70% correct). The structured approach helped the model identify acidity/basicity trends using electron effects, lone pairs, and resonance.
+- **Visual-first:** Performed poorly with only 1 correct answer. It remained mostly descriptive, unable to apply chemical logic beyond visual pattern recognition.
+- **Explanation-first:** Matched Stepwise in correctness. Prompted models to invoke resonance, inductive effects, and hybridization — but sometimes too abstract or hesitant.
+
+---
 
 ## 🚨 Common Failure Modes
 
-- **Visual-first prompts** often produced vague atom/group descriptions with no real judgment.
-- **Caffeine vs Morphine** and **Nicotinamide vs Histamine** repeatedly confused the model due to complex, unfamiliar pharmacological structures.
-- Many **Baseline** responses gave correct guesses with no mechanistic justification.
-- Some **Stepwise** prompts collapsed into listing features without concluding.
+- **Visual-first prompts** yielded shallow comparisons — they often listed groups or atoms without conclusions.
+- **Baseline** produced multiple off-topic answers (e.g. Caffeine, Nicotinamide) and guessed without reasoning.
+- **Cytosine vs Adenine** and **Caffeine vs Morphine** tripped up all prompt types due to ambiguous structure and poor domain familiarity.
+- Some **Stepwise** and **Explanation-first** prompts stopped short of a confident judgment even with decent chemical framing.
+
+---
 
 ## 🏅 Best Performing Images
 
-- **Benzoic_acid vs Phenol**: All 4 prompts got it right with clear, confident reasoning.
-- **Formic_acid vs Acetic-acid** and **H2O vs Methanol**: Great performance especially from Stepwise and Explanation-first.
-- **Ibuprofen vs Salicylic-acid**: Clear advantage in salicylic acid, well picked up by multiple prompt types.
+- **Benzoic_acid vs Phenol**: All four prompts answered correctly with clear, mechanistic logic.
+- **Formic_acid vs Acetic-acid** and **H2O vs Methanol**: Strong results from Stepwise and Explanation-first due to clear trends in electron effects.
+- **Ibuprofen vs Salicylic-acid**: All prompt types except Baseline gave chemically grounded conclusions.
+
+---
 
 ## ❌ Worst Performing Images
 
-- **Caffeine vs Morphine**: All prompt types failed or hedged.
-- **Nicotinamide vs Histamine**: Multiple prompts gave no real analysis.
-- **Cytosine vs Adenine**: No strong reasoning, and only 1 correct-ish answer from 4 prompts.
+- **Caffeine vs Morphine**: Baseline, Stepwise, and Visual-first all failed; only Explanation-first showed partial reasoning.
+- **Nicotinamide vs Histamine**: All prompts gave vague or off-topic responses.
+- **Cytosine vs Adenine**: None gave a fully correct response. Only partial reasoning was observed.
 
 ---
 
@@ -124,22 +128,22 @@
 
 ## 1. Correct Identifications often involved:
 
-- Functional group comparisons (COOH vs OH)
-- Charge stabilization (resonance, inductive effects)
-- Clear reasoning steps or structured breakdown
-- References to electron-withdrawing/donating effects
+- Recognizing acidic functional groups (e.g. COOH vs OH)
+- Delocalization effects in anions (e.g. resonance in phenol vs ethanol)
+- Inductive influence of substituents (e.g. methyl in acetic acid)
+- Accurate hybridization and lone pair availability comparisons
 
 ## 2. Partial Identifications were seen when:
 
-- The model made a correct pick but gave incomplete or vague justification
-- Prompts were more observational than analytical
-- Multiple factors were mentioned but not weighed properly
+- The model picked the correct molecule but failed to explain why
+- Atom/group lists were correct but not analyzed for reactivity
+- The reasoning was hedged or lacked follow-through
 
 ## 3. Incorrect Identifications still included:
 
-- Descriptions without judgment (“X has a methyl group…” with no follow-up)
-- Focus on irrelevant features (e.g. brain receptors)
-- Mixing up acidity vs basicity, or not picking a side at all
+- Flipping correct acid/base roles (e.g. benzoic vs benzaldehyde)
+- Confusing solubility or bonding with acidity
+- Failing to mention or weigh key structural features
 
 ---
 
@@ -147,15 +151,17 @@
 
 | Prompt Type       | Strengths                                                                 | Weaknesses                                                                 |
 |-------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| **Baseline**      | Can land correct answers on familiar comparisons; simple structure helps  | Often lacks reasoning; guesses with vague or no justification              |
-| **Stepwise**      | Best overall performer; supports detailed, logical structure               | Sometimes lists features without reaching a conclusion                     |
-| **Visual-first**  | Useful only when structures are extremely distinct                        | Mostly observational, avoids conclusions, lacks chemical logic             |
-| **Explanation-first** | Triggers mechanistic and theoretical knowledge; strong on charge effects | Can ramble or drift when the chemistry is too abstract                     |
+| **Baseline**      | Rarely helpful; sometimes lucky guesses                                   | 0 correct answers; vague, off-topic, or irrelevant reasoning               |
+| **Stepwise**      | Excellent at guiding correct reasoning via chemical structure breakdowns  | Occasionally hesitant to commit to a conclusion                           |
+| **Visual-first**  | Can recognize clear structural differences visually                       | Lacks chemical reactivity logic; failed in most comparisons                |
+| **Explanation-first** | Elicits deep chemical reasoning (e.g. resonance, EN, lone pairs)         | Sometimes over-explains or trails off without judgment                    |
 
 ---
 
 # 🪞 Final Reflection
 
-The results show that **structured prompts** like **Stepwise** and **Explanation-first** are far more effective at eliciting correct, reasoned chemical comparisons. **Baseline** works when the task is easy and familiar. **Visual-first**, while intuitive for multimodal reasoning, underperforms in chemistry tasks where internal reasoning, not appearance, determines reactivity.
+The corrected analysis makes it clear: **structured prompts** are not just helpful — they’re essential for accurate chemical comparisons. **Baseline** and **Visual-first** approaches are largely ineffective in this domain, often offering vague guesses or surface-level observations. 
 
-This evaluation confirms: for complex domain tasks like acid/base comparison, **prompt design matters more than model size** — and the right reasoning chain can unlock far better performance.
+Meanwhile, **Stepwise and Explanation-first** prompts tap into the model’s latent chemistry knowledge. They scaffold its reasoning and enable it to correctly interpret acidity/basicity based on **electron effects, resonance, and hybridization**.
+
+This study confirms that **prompt quality, not model identity**, is the single most powerful lever for improving performance in scientific reasoning tasks.
