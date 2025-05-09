@@ -4,7 +4,7 @@
 
 | Pair | Acid               | Base              | Notes                                  | Correct Answer |
 |------|--------------------|-------------------|----------------------------------------|----------------|
-| 1    | Benzoic acid        | Phenol2           | Carboxyl stronger than OH              | first |
+| 1    | Benzoic acid        | Phenol           | Carboxyl stronger than OH              | first |
 | 2    | Formic acid         | Acetic acid       | Electron withdrawal differences        | first |
 | 3    | Ammonia             | MeNH2             | Basicity shift with alkyl              | second |
 | 4    | Cytosine            | Adenine           | Nucleobase basicity                    | first |
