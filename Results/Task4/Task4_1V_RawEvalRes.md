@@ -1,6 +1,34 @@
 # 🧠 Task 4 (SN1SN2)
 
 ---
+
+## 📊 Baseline Manual Scoring (0–2)
+
+| Pair | Score | Summary |
+|------|-------|---------|
+| 1. Aniline vs Phenol | 0 | Completely hallucinates two different molecules (e.g., NH₂CH₂CH₂CH₂OH) not in the pair. |
+| 2. Paracetamol vs Morphine | 0 | Generic rambling about electronegativity, no molecule comparison, ends in prompt-loop. |
+| 3. Caffeine vs Adenine | 0 | Template spam about “ligand geometry” and “enzyme interactions.” No answer. |
+| 4. Ibuprofen vs Salicylic acid | 0 | Massive repetition of “functional groups allow SN1 to occur.” No actual content. |
+| 5. Methanol vs Ethanol | 0 | Broken loop: “amines vs amines” nonsense. No chemistry, no decision. |
+| 6. Acetic acid vs Benzoic acid | 0 | Repetitive “planar functional group” gibberish. Infinite loop. |
+| 7. Cyclohexane vs Benzene | 0 | Corporate-speak on “likelihood of SN reactions increasing daily.” No molecules discussed. |
+| 8. Formic acid vs Nitrobenzene | 0 | Vague buzzwords like “geometry facilitates pathway.” No actual answer. |
+| 9. Pyridine vs Pyrrole | 0 | Pure hallucination about “electrophidalders,” “endoaldors,” and “enozals.” |
+| 10. Furan vs Thiophene | 0 | Word salad repeating “relevance to context” with zero comparison or SN1 logic. |
+
+---
+
+### ✅ Verdict
+
+- **Total Score:** 0 out of 20  
+- **Avg per Pair:** 0.0  
+
+**Conclusion:** Baseline completions completely failed to address the question with relevant or real content.
+
+---
+---
+
 ## 📊 Stepwise Prompt Evaluation Summary (Prompts #1–20)
 
 ### 🧾 Manual Evaluation Overview
