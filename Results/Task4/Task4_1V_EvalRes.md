@@ -1,168 +1,79 @@
-# 🧠 Task 2 (Acid-Base Strength Prediction)
+# 🧠 Task 4 (SN1SN2)
+
+---
+## 📊 Stepwise Prompt Evaluation Summary (Prompts #1–20)
+
+### 🧾 Manual Evaluation Overview
+
+| Prompt # | Description (Abbreviated)                              | 2 (Good) | 1 (Partial) | 0 (Broken) | Notes                          |
+|----------|---------------------------------------------------------|----------|-------------|------------|--------------------------------|
+| 1        | LG → Carbocation → Decide                              | 1        | 2           | 7          | Best of early batch            |
+| 2        | Stepwise: LG, C+ type, resonance                        | 1        | 1           | 8          | Format copied, logic missing   |
+| 3        | Structure → Stability → Decide                         | 0        | 3           | 7          | All vague or fake              |
+| 4        | Substitution site → Rank stabilities                   | 1        | 1           | 8          | Often template looped          |
+| 5        | LG + C+ + sterics                                       | 0        | 2           | 8          | Heavily broken                 |
+| 6        | Can it form C+? (resonance, tertiary)                  | 0        | 3           | 7          | Structure intact, weak content |
+| 7        | LG? C+ stable? Compare                                  | 1        | 1           | 8          | Often restates prompt          |
+| 8        | LG → Inductive/resonance → Choose                      | 0        | 2           | 8          | No real reasoning              |
+| 9        | Examine: LG? C+ stable? SN1?                           | 1        | 0           | 9          | Only 1 usable output           |
+| 10       | Solvent + LG + Stability                               | 0        | 1           | 9          | Mostly broken LaTeX            |
+| 11       | Substitution → Ionization → C+ stability               | 0        | 0           | 10         | Fully broken                   |
+| 12       | Site of ionization → Resonance/C+ analysis             | 0        | 2           | 8          | Weak phrasing effort           |
+| 13       | LG → C+ → Sterics → Decide                             | 0        | 2           | 8          | Some structure, bad logic      |
+| 14       | Isolate LG → Carbocation → Stabilization               | 0        | 1           | 9          | Mostly broken formatting       |
+| 15       | LG? C+ type? Resonance? → Pick                         | 0        | 1           | 9          | Only 1 effortful response      |
+| 16       | Substitution center → Carbocation → Decide             | 1        | 0           | 9          | Best single strong completion  |
+| 17       | Simulate C+ → Assess via resonance                     | 1        | 2           | 7          | One great (MeOH/Ethanol)       |
+| 18       | LG ease → C+ stability → Predict SN1                   | 0        | 1           | 9          | Generic phrasing or loops      |
+| 19       | LG? → C+ class? → Resonance? → Decide                  | 0        | 3           | 7          | Several fluffy completions     |
+| 20       | LG + C+ + Conditions → Decide                          | 0        | 3           | 7          | Most recent, lots of loops     |
 
 ---
 
-## 📋 Overall CoT Evaluation Results
+## 📊 Stepwise Prompt Score Table (Manual Evaluation)
 
-## 🧪 Task 3 Full Evaluation Table (All 40 Results)
-
-| Image1            | Image2              | Prompt Type       | Score | Reason                                                                 |
-|-------------------|---------------------|-------------------|-------|------------------------------------------------------------------------|
-| Ammonia.png       | Methanol.png        | Baseline          | 1     | Correct pick, but vague justification                                 |
-| Ammonia.png       | Methanol.png        | Stepwise          | 2     | Good lone pair + EN comparison                                        |
-| Ammonia.png       | Methanol.png        | Visual-first      | 1     | Identifies atoms, but conclusion is unclear                           |
-| Ammonia.png       | Methanol.png        | Explanation-first | 2     | Explains N vs O lone pair donation well                               |
-| MeNH2.png         | Aniline.png         | Baseline          | 1     | Correct pick, but lacks resonance explanation                         |
-| MeNH2.png         | Aniline.png         | Stepwise          | 2     | Good discussion of conjugation in aniline                             |
-| MeNH2.png         | Aniline.png         | Visual-first      | 1     | Structural only; no reactivity comparison                             |
-| MeNH2.png         | Aniline.png         | Explanation-first | 2     | Well-explained difference in lone pair availability                   |
-| Imidazole.png     | Pyridine.png        | Baseline          | 1     | Picks imidazole but gives vague reasons                               |
-| Imidazole.png     | Pyridine.png        | Stepwise          | 2     | Discusses N positioning and basicity correctly                        |
-| Imidazole.png     | Pyridine.png        | Visual-first      | 1     | Visual comparison only, no reasoning                                  |
-| Imidazole.png     | Pyridine.png        | Explanation-first | 2     | Explains delocalization and N lone pair behavior                      |
-| Ethanol.png       | Phenol.png          | Baseline          | 1     | Picks ethanol, but shallow reasoning                                  |
-| Ethanol.png       | Phenol.png          | Stepwise          | 2     | Explains resonance in phenol and favors ethanol                       |
-| Ethanol.png       | Phenol.png          | Visual-first      | 1     | Mentions atoms, weak logic                                            |
-| Ethanol.png       | Phenol.png          | Explanation-first | 2     | Solid justification about lone pair access                            |
-| Pyrrole.png       | Pyridine.png        | Baseline          | 0     | Incorrect: says pyridine is more nucleophilic                         |
-| Pyrrole.png       | Pyridine.png        | Stepwise          | 1     | Vague lone pair talk, doesn't resolve conclusion                      |
-| Pyrrole.png       | Pyridine.png        | Visual-first      | 0     | Describes shape, gives no judgment                                    |
-| Pyrrole.png       | Pyridine.png        | Explanation-first | 1     | Mentions lone pair role, but no clear conclusion                      |
-| Cytosine.png      | Uracil.png          | Baseline          | 1     | Picks cytosine, doesn't explain well                                  |
-| Cytosine.png      | Uracil.png          | Stepwise          | 2     | Great atom-level comparison                                           |
-| Cytosine.png      | Uracil.png          | Visual-first      | 1     | Lists atoms/groups, avoids answering                                  |
-| Cytosine.png      | Uracil.png          | Explanation-first | 2     | Explains lone pair availability and resonance                         |
-| Histamine.png     | Imidazole.png       | Baseline          | 1     | Correct pick, shallow reasoning                                       |
-| Histamine.png     | Imidazole.png       | Stepwise          | 2     | Compares reactive N locations well                                    |
-| Histamine.png     | Imidazole.png       | Visual-first      | 1     | Describes both groups but avoids call                                 |
-| Histamine.png     | Imidazole.png       | Explanation-first | 2     | Discusses amine vs aromatic behavior well                             |
-| Benzaldehyde.png  | Benzoic_acid.png    | Baseline          | 0     | Incorrect; benzoic acid less nucleophilic                             |
-| Benzaldehyde.png  | Benzoic_acid.png    | Stepwise          | 1     | Identifies groups but avoids judgment                                 |
-| Benzaldehyde.png  | Benzoic_acid.png    | Visual-first      | 0     | Pure description, no reasoning                                        |
-| Benzaldehyde.png  | Benzoic_acid.png    | Explanation-first | 1     | Weak reasoning, no strong conclusion                                  |
-| Nicotinamid.png   | Purine.png          | Baseline          | 0     | Picks purine without valid reasoning                                  |
-| Nicotinamid.png   | Purine.png          | Stepwise          | 1     | Somewhat reasonable but lacks clarity                                 |
-| Nicotinamid.png   | Purine.png          | Visual-first      | 0     | Only describes atoms, no call made                                    |
-| Nicotinamid.png   | Purine.png          | Explanation-first | 1     | Attempts discussion, lacks depth or clarity                           |
-| Furan.png         | Thiophene.png       | Baseline          | 1     | Picks furan (correct), gives no good reason                           |
-| Furan.png         | Thiophene.png       | Stepwise          | 2     | Discusses electronegativity and delocalization                        |
-| Furan.png         | Thiophene.png       | Visual-first      | 1     | Notes O vs S difference, no real explanation                          |
-| Furan.png         | Thiophene.png       | Explanation-first | 2     | Strong justification using atomic properties                          |
+| Prompt/Pair   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | Avg  |
+|----------|-------------------|--------------------------|----------------------|------------------------------|----------------------|------------------------------|--------------------------|-----------------------------|----------------------|----------------------|------|
+| Prompt 1 | 2                 | 1                        | 0                    | 0                            | 0                    | 0                            | 0                        | 0                           | 0                    | 1                    | 0.4  |
+| Prompt 2 | 2                 | 1                        | 0                    | 0                            | 0                    | 0                            | 0                        | 0                           | 0                    | 1                    | 0.4  |
+| Prompt 3 | 1                 | 1                        | 0                    | 0                            | 0                    | 1                            | 0                        | 0                           | 0                    | 1                    | 0.4  |
+| Prompt 4 | 2                 | 0                        | 0                    | 0                            | 0                    | 0                            | 0                        | 0                           | 0                    | 1                    | 0.3  |
+| Prompt 5 | 1                 | 0                        | 0                    | 0                            | 0                    | 0                            | 0                        | 0                           | 0                    | 1                    | 0.2  |
+| Prompt 6 | 1                 | 0                        | 0                    | 0                            | 0                    | 0                            | 0                        | 0                           | 0                    | 1                    | 0.2  |
+| Prompt 7 | 2                 | 0                        | 0                    | 0                            | 0                    | 0                            | 0                        | 0                           | 0                    | 1                    | 0.3  |
+| Prompt 8 | 1                 | 1                        | 0                    | 0                            | 0                    | 0                            | 0                        | 0                           | 0                    | 1                    | 0.3  |
+| Prompt 9 | 2                 | 0                        | 0                    | 0                            | 0                    | 0                            | 0                        | 0                           | 0                    | 0                    | 0.2  |
+| Prompt10 | 1                 | 0                        | 1                    | 0                            | 0                    | 0                            | 0                        | 0                           | 0                    | 1                    | 0.3  |
+| Prompt11 | 0                 | 0                        | 0                    | 0                            | 0                    | 0                            | 0                        | 0                           | 0                    | 0                    | 0.0  |
+| Prompt12 | 1                 | 0                        | 0                    | 0                            | 0                    | 1                            | 1                        | 0                           | 0                    | 0                    | 0.3  |
+| Prompt13 | 1                 | 0                        | 0                    | 0                            | 0                    | 0                            | 0                        | 0                           | 1                    | 0                    | 0.2  |
+| Prompt14 | 0                 | 0                        | 0                    | 0                            | 0                    | 0                            | 0                        | 1                           | 0                    | 0                    | 0.1  |
+| Prompt15 | 1                 | 0                        | 0                    | 0                            | 0                    | 0                            | 0                        | 0                           | 0                    | 0                    | 0.1  |
+| Prompt16 | 2                 | 0                        | 0                    | 0                            | 0                    | 0                            | 0                        | 0                           | 0                    | 0                    | 0.2  |
+| Prompt17 | 1                 | 0                        | 0                    | 0                            | 2                    | 0                            | 0                        | 0                           | 0                    | 1                    | 0.4  |
+| Prompt18 | 1                 | 0                        | 0                    | 0                            | 0                    | 0                            | 0                        | 0                           | 0                    | 1                    | 0.2  |
+| Prompt19 | 0                 | 0                        | 1                    | 0                            | 0                    | 1                            | 0                        | 0                           | 0                    | 1                    | 0.3  |
+| Prompt20 | 1                 | 0                        | 1                    | 0                            | 0                    | 0                            | 0                        | 0                           | 0                    | 1                    | 0.3  |
 
 ---
 
-# 🧪 Overview
+### 🏆 Top Performing Prompts (Based on Manual Scoring)
 
-## 📈 Accuracy Summary
-
-| Accuracy Level | Baseline | Stepwise | Visual-first | Explanation-first |
-|----------------|----------|----------|---------------|-------------------|
-| 2 (Correct)    | 0        | 7        | 0             | 7                 |
-| 1 (Partial)    | 7        | 3        | 7             | 3                 |
-| 0 (Wrong)      | 3        | 0        | 3             | 0                 |
+1. **Prompt #1** – Most consistently solid output, especially early on.
+2. **Prompt #16** – One genuinely strong and relevant answer with chemical accuracy.
+3. **Prompt #17** – One strong and two decent attempts; best balance in the latter half.
+4. **Prompt #19** – Several fluffy but structured answers; more potential than earlier ones.
+5. **Prompt #4** – Steady format, occasionally led to structured reasoning.
 
 ---
 
-# 🧠 General Observations
+### 🔍 Key Observations
 
-### 📐 Formula
-`Success (Failure) Rate = (Number of responses scored 2 (or 0)) / (Total number of responses for that prompt type) × 100%`
-
----
-
-### ✅ Success Rate Table
-
-| Prompt Type       | Formula | Result |
-|-------------------|---------|--------|
-| Baseline          | 0 / 10  | 0%     |
-| Stepwise          | 7 / 10  | 70%    |
-| Visual-first      | 0 / 10  | 0%     |
-| Explanation-first | 7 / 10  | 70%    |
-
----
-
-### ❌ Failure Rate Table
-
-| Prompt Type       | Formula | Result |
-|-------------------|---------|--------|
-| Baseline          | 3 / 10  | 30%    |
-| Stepwise          | 0 / 10  | 0%     |
-| Visual-first      | 3 / 10  | 30%    |
-| Explanation-first | 0 / 10  | 0%     |
-
----
-## 📊 Prompt Type Trends
-
-- **Baseline:** Never got a fully correct answer. Most responses were surface-level guesses without chemical reasoning. Only useful when the correct answer happened to be obvious.
-- **Stepwise:** Among the top performers with 70% accuracy. These prompts led the model to structure its analysis, often identifying correct trends in lone pair localization and hybridization.
-- **Visual-first:** Failed to produce a single fully correct answer. Even with obvious visual contrasts, the model stuck to neutral or hesitant language. Lacked any chemical insight.
-- **Explanation-first:** Matched Stepwise in correctness (7/10). Helped trigger discussions about resonance and delocalization, but occasionally veered into vague or verbose responses.
-
----
-
-## 🚨 Common Failure Modes
-
-- **Visual-first** prompts consistently produced vague, observational content with no real conclusion.
-- **Baseline** prompts showed a strong tendency to guess, sometimes aligning with the correct answer, but lacked reliable chemical logic.
-- **Electron-withdrawing group effects** were misunderstood or ignored — notably in benzoic acid vs benzaldehyde.
-- Some **partially correct Stepwise and Explanation-first** responses over-described structures without concluding which was more nucleophilic.
-
----
-
-## 🏅 Best Performing Images
-
-- **Ammonia vs Methanol** and **MeNH₂ vs Aniline**: Clear-cut differences allowed Stepwise and Explanation-first to excel.
-- **Furan vs Thiophene**: Strong contrast in heteroatom electronegativity was correctly used by Stepwise and Explanation-first.
-- **Histamine vs Imidazole**: Nucleophilic N site in histamine was consistently identified by both strong prompt types.
-
----
-
-## ❌ Worst Performing Images
-
-- **Benzaldehyde vs Benzoic acid**: Baseline and Visual-first both failed. Few models explained carbonyl nucleophilicity or carboxyl suppression.
-- **Nicotinamide vs Purine**: All prompt types were hesitant or incorrect. Complex structure confused reasoning.
-- **Pyrrole vs Pyridine**: Baseline made an incorrect call; Visual-first and Explanation-first both hesitated despite clear trends in lone pair delocalization.
-
----
-
-# 🔍 Detailed Insights by Category
-
-## 1. Correct Identifications often involved:
-
-- Step-by-step breakdown of reactive centers (e.g. lone pair availability, hybridization)
-- Recognition of resonance suppression (e.g. in aniline, phenol)
-- Electronegative atom comparisons (e.g. O vs S, N vs O)
-- Clear comparisons of sp² vs sp³ lone pair geometry
-
-## 2. Partial Identifications were seen when:
-
-- The model made a correct guess but failed to explain why
-- It described structural features (e.g. atom types) without interpretation
-- It hedged its language (“might be more reactive” or “likely”)
-
-## 3. Incorrect Identifications still included:
-
-- Choosing less nucleophilic species due to resonance misunderstanding
-- Assuming more atoms = more reactive (e.g. histamine logic in Baseline)
-- Using vague or irrelevant criteria (e.g. "simpler" or "bulkier")
-
----
-
-# 🧾 Prompt Type Performance Summary
-
-| Prompt Type       | Strengths                                                                 | Weaknesses                                                                 |
-|-------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| **Baseline**      | Sometimes aligns with simple comparisons                                  | No correct answers; lacks chemical reasoning; guesses blindly              |
-| **Stepwise**      | Strong at guiding structured chemical logic (hybridization, resonance)    | Sometimes over-literal; partials happen when no clear conclusion is made   |
-| **Visual-first**  | Identifies obvious visual differences (atoms/groups)                      | 0 correct answers; lacks reactivity logic; only visual features            |
-| **Explanation-first** | Triggers deep reasoning (resonance, lone pairs, conjugation)             | Occasionally verbose or too abstract for unfamiliar molecules              |
-
----
-
-# 🪞 Final Reflection
-
-In nucleophilicity comparisons, models can only succeed when the prompt scaffolds **chemical reasoning** — not just recognition. The complete failure of Visual-first and Baseline to produce correct answers highlights the **inadequacy of unstructured or shallow prompts**.
-
-Meanwhile, both **Stepwise and Explanation-first** successfully triggered discussions about lone pair localization, resonance suppression, and heteroatom effects — which are central to predicting nucleophilic strength.
+- **Good prompts ≠ good completions** — many well-designed prompts triggered template repetition or hallucination.
+- **Visual understanding seemed unreliable** — most correct answers came from simple or familiar cases (e.g., Aniline vs Phenol).
+- **Prompt looping and degenerate output** was the most common failure mode (esp. in Prompts #5, #10, #15).
+- **Only 5 completions scored 2/2 out of 200 total**, most from just 3 molecule pairs.
+- Prompts that directly asked the model to “decide” at the end fared better than vague or fragmentary ones.
+ heteroatom effects — which are central to predicting nucleophilic strength.
 
 Ultimately, this task reaffirms that **prompt structure is not cosmetic** — it fundamentally alters how models think.
