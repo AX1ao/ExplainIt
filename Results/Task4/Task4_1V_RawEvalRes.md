@@ -183,3 +183,79 @@ Ultimately, this task reaffirms that **prompt structure is not cosmetic** — it
 - **Looping output, LaTeX corruption, and vagueness** were the most common failure modes.
 - Across 200 completions, only **~5 truly strong answers** emerged.
 
+---
+---
+
+## 📊 Explanation-First Prompt Evaluation Summary (Prompts #1–20)
+
+### 🧾 Manual Evaluation Overview
+
+| Prompt # | Description (Abbreviated)                                          | 2 (Good) | 1 (Partial) | 0 (Broken) | Notes                                    |
+|----------|---------------------------------------------------------------------|----------|-------------|------------|------------------------------------------|
+| 1        | Cation stability → Decide                                           | 0        | 4           | 6          | Several vague but structured completions |
+| 2        | 2-step SN1 + resonance/EDG support                                 | 0        | 2           | 8          | Mostly template echoes                   |
+| 3        | Cation stability → Structure-based                                 | 1        | 2           | 7          | One solid explanation (Aniline vs Phenol)|
+| 4        | LG departure → Stable intermediate                                 | 0        | 1           | 9          | Total loops or empty filler              |
+| 5        | LG ability + stabilize C+ → Decide                                 | 0        | 1           | 9          | One attempt, mostly hallucination        |
+| 6        | Polar solvent benefit → Which molecule benefits?                   | 0        | 0           | 10         | Total collapse — surreal or broken       |
+| 7        | Resonance/hyperconjugation → C+ stability → Choose                 | 0        | 1           | 9          | One tries SN1 logic, rest hallucinate    |
+| 8        | Substitution pattern (3° > 2° > 1°)                                 | 0        | 2           | 8          | Several hallucinations or mismatches     |
+| 9        | Benzylic/allylic stabilization                                     | 1        | 2           | 7          | Several say “yes” with no logic          |
+| 10       | EWGs destabilize C+ → Analyze surroundings                         | 0        | 2           | 8          | Mostly broken loops, 2 vague nods        |
+| 11       | Cation rearrangement potential                                     | 1        | 1           | 8          | Aniline vs Phenol good; rest default “Yes” |
+| 12       | Sterics less relevant → Focus on cation stability                  | 0        | 1           | 9          | Prompt repeats or SN3 hallucinations     |
+| 13       | Loss of electrons → Molecule resilience → SN1 likelihood           | 0        | 2           | 8          | A few gesture at logic, none complete    |
+| 14       | LG leaves easily + charge stabilized → Best SN1 substrate          | 1        | 4           | 5          | One of the best overall                  |
+| 15       | SN1 = non-concerted → LG leaves spontaneously → Which fits better? | 0        | 0           | 10         | Complete breakdown                       |
+| 16       | π-systems / lone pairs → C+ stabilization                          | 0        | 3           | 7          | Weak, vague mentions of delocalization   |
+| 17       | 3° C or resonance → SN1-prone?                                     | 1        | 1           | 8          | Only one good completion                 |
+| 18       | Weaker base = better LG                                            | 0        | 1           | 9          | All others hallucinated H₂O or HCl       |
+| 19       | Inductive effects → Stabilization context                          | 0        | 2           | 8          | Mostly repeats or off-topic              |
+| 20       | Structure-based C+ support → Final judgment                        | 0        | 2           | 8          | Molecule fabrication and loops dominate  |
+
+---
+
+### 📊 Explanation-First Prompt Score Table (Manual Evaluation)
+
+| Prompt/Pair   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | Avg  |
+|---------------|---|---|---|---|---|---|---|---|---|----|------|
+| Prompt 1      | 0 | 0 | 1 | 0 | 1 | 0 | 0 | 0 | 1 | 1  | 0.4  |
+| Prompt 2      | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0  | 0.2  |
+| Prompt 3      | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0  | 0.3  |
+| Prompt 4      | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0  | 0.1  |
+| Prompt 5      | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0  | 0.1  |
+| Prompt 6      | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0  | 0.0  |
+| Prompt 7      | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0  | 0.1  |
+| Prompt 8      | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0  | 0.2  |
+| Prompt 9      | 2 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0  | 0.4  |
+| Prompt 10     | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 1  | 0.2  |
+| Prompt 11     | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1  | 0.3  |
+| Prompt 12     | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0  | 0.1  |
+| Prompt 13     | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0  | 0.2  |
+| Prompt 14     | 2 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 1 | 1  | 0.6  |
+| Prompt 15     | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0  | 0.0  |
+| Prompt 16     | 1 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0  | 0.3  |
+| Prompt 17     | 2 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0  | 0.3  |
+| Prompt 18     | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0  | 0.1  |
+| Prompt 19     | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0  | 0.2  |
+| Prompt 20     | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0  | 0.2  |
+
+---
+
+### 🏆 Top Performing Prompts (Based on Manual Scoring)
+
+1. **Prompt #14** – Only one with 1 good and 4 partial completions.
+2. **Prompt #3** – One good (Aniline vs Phenol) + two more usable ones.
+3. **Prompt #9** – Clear prompt logic, 1 good + 2 partial.
+4. **Prompt #1** – Several partially structured attempts.
+5. **Prompt #17** – One strong decision, others weak but aligned.
+
+---
+
+### 🔍 Key Observations
+
+- **Most completions ignored molecules entirely** or misread the structures.
+- Even **clear chemistry prompts like EWG or carbocation rearrangement** triggered hallucinations or non-answers.
+- **Only 3 completions scored 2/2** across 200 examples.
+- **Prompt echoing, decision avoidance, and template loops** were the most common failure modes.
+- Molecules like **Aniline vs Phenol** consistently received the best-quality completions.
