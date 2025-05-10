@@ -112,7 +112,7 @@ Ultimately, this task reaffirms that **prompt structure is not cosmetic** — it
 
 ### 📊 Visual-First Prompt Score Table (Manual Evaluation)
 
-| Prompt/Pair   | Ani/Ph | Para/Mor | Caf/Ade | Ibu/Sal | MeOH/EtOH | Acid/Ben | Cycl/Benz | Form/Nitro | Pyr/Pyrr | Fur/Thio | Avg  |
+| Prompt/Pair   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | Avg  |
 |---------------|--------|----------|---------|---------|------------|-----------|------------|-------------|-----------|------------|-------|
 | Prompt 1      | 1      | 2        | 0       | 0       | 0          | 0         | 0          | 0           | 0         | 1          | 0.4   |
 | Prompt 2      | 0      | 0        | 0       | 0       | 0          | 0         | 0          | 0           | 0         | 1          | 0.1   |
