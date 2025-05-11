@@ -1,0 +1,421 @@
+image1,image2,prompt_type,prompt_text,generated_text
+Aniline.png,Nitrobenzene.png,baseline,"Which molecule is more reactive toward electrophilic aromatic substitution, the first or the second? Why?","The first aromatic position is more reactive toward electrophilic aromatic substitution than the second position. This is because the first aromatic position is part of a conjugated system, which increases the electron density and makes it more susceptible to electrophilic attack. The second position is not part of a conjugated system and has a lower electron density, making it less reactive."
+Aniline.png,Nitrobenzene.png,stepwise,"First, note if the ring has electron-donating substituents. Then, note if it has electron-withdrawing substituents. Finally, determine which ring is more reactive toward electrophiles.","As an AI language model, I cannot see or analyze images. Please provide a description of the ring or the substituents, and I will help you determine which ring is more reactive toward electrophiles."
+Aniline.png,Nitrobenzene.png,visual_first,"Observe visible features: are there -OH, -NH₂, or -NO₂ groups? Count and compare electron-donating versus electron-withdrawing groups for both molecules.","I'm sorry, but I cannot observe or analyze images. However, I can help you with the information you need to complete the task.
+
+To determine the presence of -OH, -NH₂, or -NO₂ groups, you can look at the functional groups in the molecule's skeletal structure. -OH groups are typically found in the presence of a carbon atom double-bonded to an oxygen atom, while -NH₂ groups are found in the presence of a nitrogen atom bonded to three hydrogen atoms and a carbon atom double-bonded to an oxygen atom. -NO₂ groups are found in the presence of a nitrogen atom double-bonded to an oxygen atom and a carbon atom bonded to two hydrogen atoms.
+
+To count and compare electron-donating versus electron-withdrawing groups, you can look at the electronegativity differences between the atoms in the molecule. Electron-donating groups typically have higher electronegativity than electron-withdrawing groups, and they can be identified by the presence of lone pairs of electrons on the atoms in the group. Electron-withdrawing groups typically have lower electronegativity than electron-donating groups, and they can be identified by the presence of multiple bonds between the atoms in the group.
+
+You can use the following electronegativity values as a reference:
+
+- OH: 3.4
+- NH₂: 3.0
+- NO₂: 3.0
+
+To compare the electron-donating versus electron-withdrawing groups, you can count the number of lone pairs of electrons in each group and compare the electronegativity values."
+Aniline.png,Nitrobenzene.png,explanation_first,Consider the net electronic effect (donating vs withdrawing) based on the visible substituents. Then predict which molecule will react faster toward EAS.,"As a language and vision assistant, I can't directly view images or 3D structures of molecules. However, I can help you analyze the information you have and guide you in predicting the electronic effect and reaction rates.
+
+To predict the electronic effect based on the visible substituents, you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will pull electrons more strongly from the central atom, leading to a more negative charge on the central atom. This can affect the overall electronic effect.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity will cause the molecule to become more polar, which can affect the overall electronic effect.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electronic effect.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electronic effect.
+
+To predict which molecule will react faster toward EAS (electron affinity), you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will generally lower the electron affinity of the molecule.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity can influence the electron affinity by affecting the overall polarity of the molecule.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule, which can affect the electron affinity.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electron affinity.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electron affinity.
+
+Without a visual representation of the molecules, I can't provide specific predictions. However, you can use these guidelines to analyze the substituents in the molecules and make educated guesses about their electronic effects and reaction rates."
+Benzene.png,Toluene.png,baseline,"Which molecule is more reactive toward electrophilic aromatic substitution, the first or the second? Why?","The first aromatic position is more reactive toward electrophilic aromatic substitution than the second position. This is because the first aromatic position is part of a conjugated system, which increases the electron density and makes it more susceptible to electrophilic attack. The second position is not part of a conjugated system and has a lower electron density, making it less reactive."
+Benzene.png,Toluene.png,stepwise,"First, note if the ring has electron-donating substituents. Then, note if it has electron-withdrawing substituents. Finally, determine which ring is more reactive toward electrophiles.","As an AI language model, I cannot see or analyze images. Please provide a description of the ring or the substituents, and I will help you determine which ring is more reactive toward electrophiles."
+Benzene.png,Toluene.png,visual_first,"Observe visible features: are there -OH, -NH₂, or -NO₂ groups? Count and compare electron-donating versus electron-withdrawing groups for both molecules.","I'm sorry, but I cannot observe or analyze images. However, I can help you with the information you need to complete the task.
+
+To determine the presence of -OH, -NH₂, or -NO₂ groups, you can look at the functional groups in the molecule's skeletal structure. -OH groups are typically found in the presence of a carbon atom double-bonded to an oxygen atom, while -NH₂ groups are found in the presence of a nitrogen atom bonded to three hydrogen atoms and a carbon atom double-bonded to an oxygen atom. -NO₂ groups are found in the presence of a nitrogen atom double-bonded to an oxygen atom and a carbon atom bonded to two hydrogen atoms.
+
+To count and compare electron-donating versus electron-withdrawing groups, you can look at the electronegativity differences between the atoms in the molecule. Electron-donating groups typically have higher electronegativity than electron-withdrawing groups, and they can be identified by the presence of lone pairs of electrons on the atoms in the group. Electron-withdrawing groups typically have lower electronegativity than electron-donating groups, and they can be identified by the presence of multiple bonds between the atoms in the group.
+
+You can use the following electronegativity values as a reference:
+
+- OH: 3.4
+- NH₂: 3.0
+- NO₂: 3.0
+
+To compare the electron-donating versus electron-withdrawing groups, you can count the number of lone pairs of electrons in each group and compare the electronegativity values."
+Benzene.png,Toluene.png,explanation_first,Consider the net electronic effect (donating vs withdrawing) based on the visible substituents. Then predict which molecule will react faster toward EAS.,"As a language and vision assistant, I can't directly view images or 3D structures of molecules. However, I can help you analyze the information you have and guide you in predicting the electronic effect and reaction rates.
+
+To predict the electronic effect based on the visible substituents, you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will pull electrons more strongly from the central atom, leading to a more negative charge on the central atom. This can affect the overall electronic effect.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity will cause the molecule to become more polar, which can affect the overall electronic effect.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electronic effect.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electronic effect.
+
+To predict which molecule will react faster toward EAS (electron affinity), you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will generally lower the electron affinity of the molecule.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity can influence the electron affinity by affecting the overall polarity of the molecule.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule, which can affect the electron affinity.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electron affinity.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electron affinity.
+
+Without a visual representation of the molecules, I can't provide specific predictions. However, you can use these guidelines to analyze the substituents in the molecules and make educated guesses about their electronic effects and reaction rates."
+Benzaldehyde.png,Benzoic_acid.png,baseline,"Which molecule is more reactive toward electrophilic aromatic substitution, the first or the second? Why?","The first aromatic position is more reactive toward electrophilic aromatic substitution than the second position. This is because the first aromatic position is part of a conjugated system, which increases the electron density and makes it more susceptible to electrophilic attack. The second position is not part of a conjugated system and has a lower electron density, making it less reactive."
+Benzaldehyde.png,Benzoic_acid.png,stepwise,"First, note if the ring has electron-donating substituents. Then, note if it has electron-withdrawing substituents. Finally, determine which ring is more reactive toward electrophiles.","As an AI language model, I cannot see or analyze images. Please provide a description of the ring or the substituents, and I will help you determine which ring is more reactive toward electrophiles."
+Benzaldehyde.png,Benzoic_acid.png,visual_first,"Observe visible features: are there -OH, -NH₂, or -NO₂ groups? Count and compare electron-donating versus electron-withdrawing groups for both molecules.","I'm sorry, but I cannot observe or analyze images. However, I can help you with the information you need to complete the task.
+
+To determine the presence of -OH, -NH₂, or -NO₂ groups, you can look at the functional groups in the molecule's skeletal structure. -OH groups are typically found in the presence of a carbon atom double-bonded to an oxygen atom, while -NH₂ groups are found in the presence of a nitrogen atom bonded to three hydrogen atoms and a carbon atom double-bonded to an oxygen atom. -NO₂ groups are found in the presence of a nitrogen atom double-bonded to an oxygen atom and a carbon atom bonded to two hydrogen atoms.
+
+To count and compare electron-donating versus electron-withdrawing groups, you can look at the electronegativity differences between the atoms in the molecule. Electron-donating groups typically have higher electronegativity than electron-withdrawing groups, and they can be identified by the presence of lone pairs of electrons on the atoms in the group. Electron-withdrawing groups typically have lower electronegativity than electron-donating groups, and they can be identified by the presence of multiple bonds between the atoms in the group.
+
+You can use the following electronegativity values as a reference:
+
+- OH: 3.4
+- NH₂: 3.0
+- NO₂: 3.0
+
+To compare the electron-donating versus electron-withdrawing groups, you can count the number of lone pairs of electrons in each group and compare the electronegativity values."
+Benzaldehyde.png,Benzoic_acid.png,explanation_first,Consider the net electronic effect (donating vs withdrawing) based on the visible substituents. Then predict which molecule will react faster toward EAS.,"As a language and vision assistant, I can't directly view images or 3D structures of molecules. However, I can help you analyze the information you have and guide you in predicting the electronic effect and reaction rates.
+
+To predict the electronic effect based on the visible substituents, you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will pull electrons more strongly from the central atom, leading to a more negative charge on the central atom. This can affect the overall electronic effect.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity will cause the molecule to become more polar, which can affect the overall electronic effect.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electronic effect.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electronic effect.
+
+To predict which molecule will react faster toward EAS (electron affinity), you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will generally lower the electron affinity of the molecule.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity can influence the electron affinity by affecting the overall polarity of the molecule.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule, which can affect the electron affinity.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electron affinity.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electron affinity.
+
+Without a visual representation of the molecules, I can't provide specific predictions. However, you can use these guidelines to analyze the substituents in the molecules and make educated guesses about their electronic effects and reaction rates."
+Pyridine-full.png,Benzene.png,baseline,"Which molecule is more reactive toward electrophilic aromatic substitution, the first or the second? Why?","The first aromatic position is more reactive toward electrophilic aromatic substitution than the second position. This is because the first aromatic position is part of a conjugated system, which increases the electron density and makes it more susceptible to electrophilic attack. The second position is not part of a conjugated system and has a lower electron density, making it less reactive."
+Pyridine-full.png,Benzene.png,stepwise,"First, note if the ring has electron-donating substituents. Then, note if it has electron-withdrawing substituents. Finally, determine which ring is more reactive toward electrophiles.","As an AI language model, I cannot see or analyze images. Please provide a description of the ring or the substituents, and I will help you determine which ring is more reactive toward electrophiles."
+Pyridine-full.png,Benzene.png,visual_first,"Observe visible features: are there -OH, -NH₂, or -NO₂ groups? Count and compare electron-donating versus electron-withdrawing groups for both molecules.","I'm sorry, but I cannot observe or analyze images. However, I can help you with the information you need to complete the task.
+
+To determine the presence of -OH, -NH₂, or -NO₂ groups, you can look at the functional groups in the molecule's skeletal structure. -OH groups are typically found in the presence of a carbon atom double-bonded to an oxygen atom, while -NH₂ groups are found in the presence of a nitrogen atom bonded to three hydrogen atoms and a carbon atom double-bonded to an oxygen atom. -NO₂ groups are found in the presence of a nitrogen atom double-bonded to an oxygen atom and a carbon atom bonded to two hydrogen atoms.
+
+To count and compare electron-donating versus electron-withdrawing groups, you can look at the electronegativity differences between the atoms in the molecule. Electron-donating groups typically have higher electronegativity than electron-withdrawing groups, and they can be identified by the presence of lone pairs of electrons on the atoms in the group. Electron-withdrawing groups typically have lower electronegativity than electron-donating groups, and they can be identified by the presence of multiple bonds between the atoms in the group.
+
+You can use the following electronegativity values as a reference:
+
+- OH: 3.4
+- NH₂: 3.0
+- NO₂: 3.0
+
+To compare the electron-donating versus electron-withdrawing groups, you can count the number of lone pairs of electrons in each group and compare the electronegativity values."
+Pyridine-full.png,Benzene.png,explanation_first,Consider the net electronic effect (donating vs withdrawing) based on the visible substituents. Then predict which molecule will react faster toward EAS.,"As a language and vision assistant, I can't directly view images or 3D structures of molecules. However, I can help you analyze the information you have and guide you in predicting the electronic effect and reaction rates.
+
+To predict the electronic effect based on the visible substituents, you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will pull electrons more strongly from the central atom, leading to a more negative charge on the central atom. This can affect the overall electronic effect.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity will cause the molecule to become more polar, which can affect the overall electronic effect.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electronic effect.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electronic effect.
+
+To predict which molecule will react faster toward EAS (electron affinity), you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will generally lower the electron affinity of the molecule.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity can influence the electron affinity by affecting the overall polarity of the molecule.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule, which can affect the electron affinity.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electron affinity.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electron affinity.
+
+Without a visual representation of the molecules, I can't provide specific predictions. However, you can use these guidelines to analyze the substituents in the molecules and make educated guesses about their electronic effects and reaction rates."
+Pyrrole-full.png,Benzene.png,baseline,"Which molecule is more reactive toward electrophilic aromatic substitution, the first or the second? Why?","The first aromatic position is more reactive toward electrophilic aromatic substitution than the second position. This is because the first aromatic position is part of a conjugated system, which increases the electron density and makes it more susceptible to electrophilic attack. The second position is not part of a conjugated system and has a lower electron density, making it less reactive."
+Pyrrole-full.png,Benzene.png,stepwise,"First, note if the ring has electron-donating substituents. Then, note if it has electron-withdrawing substituents. Finally, determine which ring is more reactive toward electrophiles.","As an AI language model, I cannot see or analyze images. Please provide a description of the ring or the substituents, and I will help you determine which ring is more reactive toward electrophiles."
+Pyrrole-full.png,Benzene.png,visual_first,"Observe visible features: are there -OH, -NH₂, or -NO₂ groups? Count and compare electron-donating versus electron-withdrawing groups for both molecules.","I'm sorry, but I cannot observe or analyze images. However, I can help you with the information you need to complete the task.
+
+To determine the presence of -OH, -NH₂, or -NO₂ groups, you can look at the functional groups in the molecule's skeletal structure. -OH groups are typically found in the presence of a carbon atom double-bonded to an oxygen atom, while -NH₂ groups are found in the presence of a nitrogen atom bonded to three hydrogen atoms and a carbon atom double-bonded to an oxygen atom. -NO₂ groups are found in the presence of a nitrogen atom double-bonded to an oxygen atom and a carbon atom bonded to two hydrogen atoms.
+
+To count and compare electron-donating versus electron-withdrawing groups, you can look at the electronegativity differences between the atoms in the molecule. Electron-donating groups typically have higher electronegativity than electron-withdrawing groups, and they can be identified by the presence of lone pairs of electrons on the atoms in the group. Electron-withdrawing groups typically have lower electronegativity than electron-donating groups, and they can be identified by the presence of multiple bonds between the atoms in the group.
+
+You can use the following electronegativity values as a reference:
+
+- OH: 3.4
+- NH₂: 3.0
+- NO₂: 3.0
+
+To compare the electron-donating versus electron-withdrawing groups, you can count the number of lone pairs of electrons in each group and compare the electronegativity values."
+Pyrrole-full.png,Benzene.png,explanation_first,Consider the net electronic effect (donating vs withdrawing) based on the visible substituents. Then predict which molecule will react faster toward EAS.,"As a language and vision assistant, I can't directly view images or 3D structures of molecules. However, I can help you analyze the information you have and guide you in predicting the electronic effect and reaction rates.
+
+To predict the electronic effect based on the visible substituents, you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will pull electrons more strongly from the central atom, leading to a more negative charge on the central atom. This can affect the overall electronic effect.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity will cause the molecule to become more polar, which can affect the overall electronic effect.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electronic effect.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electronic effect.
+
+To predict which molecule will react faster toward EAS (electron affinity), you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will generally lower the electron affinity of the molecule.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity can influence the electron affinity by affecting the overall polarity of the molecule.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule, which can affect the electron affinity.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electron affinity.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electron affinity.
+
+Without a visual representation of the molecules, I can't provide specific predictions. However, you can use these guidelines to analyze the substituents in the molecules and make educated guesses about their electronic effects and reaction rates."
+Phenol.png,Benzene.png,baseline,"Which molecule is more reactive toward electrophilic aromatic substitution, the first or the second? Why?","The first aromatic position is more reactive toward electrophilic aromatic substitution than the second position. This is because the first aromatic position is part of a conjugated system, which increases the electron density and makes it more susceptible to electrophilic attack. The second position is not part of a conjugated system and has a lower electron density, making it less reactive."
+Phenol.png,Benzene.png,stepwise,"First, note if the ring has electron-donating substituents. Then, note if it has electron-withdrawing substituents. Finally, determine which ring is more reactive toward electrophiles.","As an AI language model, I cannot see or analyze images. Please provide a description of the ring or the substituents, and I will help you determine which ring is more reactive toward electrophiles."
+Phenol.png,Benzene.png,visual_first,"Observe visible features: are there -OH, -NH₂, or -NO₂ groups? Count and compare electron-donating versus electron-withdrawing groups for both molecules.","I'm sorry, but I cannot observe or analyze images. However, I can help you with the information you need to complete the task.
+
+To determine the presence of -OH, -NH₂, or -NO₂ groups, you can look at the functional groups in the molecule's skeletal structure. -OH groups are typically found in the presence of a carbon atom double-bonded to an oxygen atom, while -NH₂ groups are found in the presence of a nitrogen atom bonded to three hydrogen atoms and a carbon atom double-bonded to an oxygen atom. -NO₂ groups are found in the presence of a nitrogen atom double-bonded to an oxygen atom and a carbon atom bonded to two hydrogen atoms.
+
+To count and compare electron-donating versus electron-withdrawing groups, you can look at the electronegativity differences between the atoms in the molecule. Electron-donating groups typically have higher electronegativity than electron-withdrawing groups, and they can be identified by the presence of lone pairs of electrons on the atoms in the group. Electron-withdrawing groups typically have lower electronegativity than electron-donating groups, and they can be identified by the presence of multiple bonds between the atoms in the group.
+
+You can use the following electronegativity values as a reference:
+
+- OH: 3.4
+- NH₂: 3.0
+- NO₂: 3.0
+
+To compare the electron-donating versus electron-withdrawing groups, you can count the number of lone pairs of electrons in each group and compare the electronegativity values."
+Phenol.png,Benzene.png,explanation_first,Consider the net electronic effect (donating vs withdrawing) based on the visible substituents. Then predict which molecule will react faster toward EAS.,"As a language and vision assistant, I can't directly view images or 3D structures of molecules. However, I can help you analyze the information you have and guide you in predicting the electronic effect and reaction rates.
+
+To predict the electronic effect based on the visible substituents, you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will pull electrons more strongly from the central atom, leading to a more negative charge on the central atom. This can affect the overall electronic effect.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity will cause the molecule to become more polar, which can affect the overall electronic effect.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electronic effect.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electronic effect.
+
+To predict which molecule will react faster toward EAS (electron affinity), you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will generally lower the electron affinity of the molecule.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity can influence the electron affinity by affecting the overall polarity of the molecule.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule, which can affect the electron affinity.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electron affinity.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electron affinity.
+
+Without a visual representation of the molecules, I can't provide specific predictions. However, you can use these guidelines to analyze the substituents in the molecules and make educated guesses about their electronic effects and reaction rates."
+Salicylic-acid.png,Benzoic_acid.png,baseline,"Which molecule is more reactive toward electrophilic aromatic substitution, the first or the second? Why?","The first aromatic position is more reactive toward electrophilic aromatic substitution than the second position. This is because the first aromatic position is part of a conjugated system, which increases the electron density and makes it more susceptible to electrophilic attack. The second position is not part of a conjugated system and has a lower electron density, making it less reactive."
+Salicylic-acid.png,Benzoic_acid.png,stepwise,"First, note if the ring has electron-donating substituents. Then, note if it has electron-withdrawing substituents. Finally, determine which ring is more reactive toward electrophiles.","As an AI language model, I cannot see or analyze images. Please provide a description of the ring or the substituents, and I will help you determine which ring is more reactive toward electrophiles."
+Salicylic-acid.png,Benzoic_acid.png,visual_first,"Observe visible features: are there -OH, -NH₂, or -NO₂ groups? Count and compare electron-donating versus electron-withdrawing groups for both molecules.","I'm sorry, but I cannot observe or analyze images. However, I can help you with the information you need to complete the task.
+
+To determine the presence of -OH, -NH₂, or -NO₂ groups, you can look at the functional groups in the molecule's skeletal structure. -OH groups are typically found in the presence of a carbon atom double-bonded to an oxygen atom, while -NH₂ groups are found in the presence of a nitrogen atom bonded to three hydrogen atoms and a carbon atom double-bonded to an oxygen atom. -NO₂ groups are found in the presence of a nitrogen atom double-bonded to an oxygen atom and a carbon atom bonded to two hydrogen atoms.
+
+To count and compare electron-donating versus electron-withdrawing groups, you can look at the electronegativity differences between the atoms in the molecule. Electron-donating groups typically have higher electronegativity than electron-withdrawing groups, and they can be identified by the presence of lone pairs of electrons on the atoms in the group. Electron-withdrawing groups typically have lower electronegativity than electron-donating groups, and they can be identified by the presence of multiple bonds between the atoms in the group.
+
+You can use the following electronegativity values as a reference:
+
+- OH: 3.4
+- NH₂: 3.0
+- NO₂: 3.0
+
+To compare the electron-donating versus electron-withdrawing groups, you can count the number of lone pairs of electrons in each group and compare the electronegativity values."
+Salicylic-acid.png,Benzoic_acid.png,explanation_first,Consider the net electronic effect (donating vs withdrawing) based on the visible substituents. Then predict which molecule will react faster toward EAS.,"As a language and vision assistant, I can't directly view images or 3D structures of molecules. However, I can help you analyze the information you have and guide you in predicting the electronic effect and reaction rates.
+
+To predict the electronic effect based on the visible substituents, you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will pull electrons more strongly from the central atom, leading to a more negative charge on the central atom. This can affect the overall electronic effect.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity will cause the molecule to become more polar, which can affect the overall electronic effect.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electronic effect.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electronic effect.
+
+To predict which molecule will react faster toward EAS (electron affinity), you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will generally lower the electron affinity of the molecule.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity can influence the electron affinity by affecting the overall polarity of the molecule.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule, which can affect the electron affinity.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electron affinity.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electron affinity.
+
+Without a visual representation of the molecules, I can't provide specific predictions. However, you can use these guidelines to analyze the substituents in the molecules and make educated guesses about their electronic effects and reaction rates."
+Nitrobenzene.png,Ozone.png,baseline,"Which molecule is more reactive toward electrophilic aromatic substitution, the first or the second? Why?","The first aromatic position is more reactive toward electrophilic aromatic substitution than the second position. This is because the first aromatic position is part of a conjugated system, which increases the electron density and makes it more susceptible to electrophilic attack. The second position is not part of a conjugated system and has a lower electron density, making it less reactive."
+Nitrobenzene.png,Ozone.png,stepwise,"First, note if the ring has electron-donating substituents. Then, note if it has electron-withdrawing substituents. Finally, determine which ring is more reactive toward electrophiles.","As an AI language model, I cannot see or analyze images. Please provide a description of the ring or the substituents, and I will help you determine which ring is more reactive toward electrophiles."
+Nitrobenzene.png,Ozone.png,visual_first,"Observe visible features: are there -OH, -NH₂, or -NO₂ groups? Count and compare electron-donating versus electron-withdrawing groups for both molecules.","I'm sorry, but I cannot observe or analyze images. However, I can help you with the information you need to complete the task.
+
+To determine the presence of -OH, -NH₂, or -NO₂ groups, you can look at the functional groups in the molecule's skeletal structure. -OH groups are typically found in the presence of a carbon atom double-bonded to an oxygen atom, while -NH₂ groups are found in the presence of a nitrogen atom bonded to three hydrogen atoms and a carbon atom double-bonded to an oxygen atom. -NO₂ groups are found in the presence of a nitrogen atom double-bonded to an oxygen atom and a carbon atom bonded to two hydrogen atoms.
+
+To count and compare electron-donating versus electron-withdrawing groups, you can look at the electronegativity differences between the atoms in the molecule. Electron-donating groups typically have higher electronegativity than electron-withdrawing groups, and they can be identified by the presence of lone pairs of electrons on the atoms in the group. Electron-withdrawing groups typically have lower electronegativity than electron-donating groups, and they can be identified by the presence of multiple bonds between the atoms in the group.
+
+You can use the following electronegativity values as a reference:
+
+- OH: 3.4
+- NH₂: 3.0
+- NO₂: 3.0
+
+To compare the electron-donating versus electron-withdrawing groups, you can count the number of lone pairs of electrons in each group and compare the electronegativity values."
+Nitrobenzene.png,Ozone.png,explanation_first,Consider the net electronic effect (donating vs withdrawing) based on the visible substituents. Then predict which molecule will react faster toward EAS.,"As a language and vision assistant, I can't directly view images or 3D structures of molecules. However, I can help you analyze the information you have and guide you in predicting the electronic effect and reaction rates.
+
+To predict the electronic effect based on the visible substituents, you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will pull electrons more strongly from the central atom, leading to a more negative charge on the central atom. This can affect the overall electronic effect.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity will cause the molecule to become more polar, which can affect the overall electronic effect.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electronic effect.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electronic effect.
+
+To predict which molecule will react faster toward EAS (electron affinity), you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will generally lower the electron affinity of the molecule.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity can influence the electron affinity by affecting the overall polarity of the molecule.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule, which can affect the electron affinity.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electron affinity.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electron affinity.
+
+Without a visual representation of the molecules, I can't provide specific predictions. However, you can use these guidelines to analyze the substituents in the molecules and make educated guesses about their electronic effects and reaction rates."
+Pyrrole-numbered.png,Pyridine-full.png,baseline,"Which molecule is more reactive toward electrophilic aromatic substitution, the first or the second? Why?","The first aromatic position is more reactive toward electrophilic aromatic substitution than the second position. This is because the first aromatic position is part of a conjugated system, which increases the electron density and makes it more susceptible to electrophilic attack. The second position is not part of a conjugated system and has a lower electron density, making it less reactive."
+Pyrrole-numbered.png,Pyridine-full.png,stepwise,"First, note if the ring has electron-donating substituents. Then, note if it has electron-withdrawing substituents. Finally, determine which ring is more reactive toward electrophiles.","As an AI language model, I cannot see or analyze images. Please provide a description of the ring or the substituents, and I will help you determine which ring is more reactive toward electrophiles."
+Pyrrole-numbered.png,Pyridine-full.png,visual_first,"Observe visible features: are there -OH, -NH₂, or -NO₂ groups? Count and compare electron-donating versus electron-withdrawing groups for both molecules.","I'm sorry, but I cannot observe or analyze images. However, I can help you with the information you need to complete the task.
+
+To determine the presence of -OH, -NH₂, or -NO₂ groups, you can look at the functional groups in the molecule's skeletal structure. -OH groups are typically found in the presence of a carbon atom double-bonded to an oxygen atom, while -NH₂ groups are found in the presence of a nitrogen atom bonded to three hydrogen atoms and a carbon atom double-bonded to an oxygen atom. -NO₂ groups are found in the presence of a nitrogen atom double-bonded to an oxygen atom and a carbon atom bonded to two hydrogen atoms.
+
+To count and compare electron-donating versus electron-withdrawing groups, you can look at the electronegativity differences between the atoms in the molecule. Electron-donating groups typically have higher electronegativity than electron-withdrawing groups, and they can be identified by the presence of lone pairs of electrons on the atoms in the group. Electron-withdrawing groups typically have lower electronegativity than electron-donating groups, and they can be identified by the presence of multiple bonds between the atoms in the group.
+
+You can use the following electronegativity values as a reference:
+
+- OH: 3.4
+- NH₂: 3.0
+- NO₂: 3.0
+
+To compare the electron-donating versus electron-withdrawing groups, you can count the number of lone pairs of electrons in each group and compare the electronegativity values."
+Pyrrole-numbered.png,Pyridine-full.png,explanation_first,Consider the net electronic effect (donating vs withdrawing) based on the visible substituents. Then predict which molecule will react faster toward EAS.,"As a language and vision assistant, I can't directly view images or 3D structures of molecules. However, I can help you analyze the information you have and guide you in predicting the electronic effect and reaction rates.
+
+To predict the electronic effect based on the visible substituents, you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will pull electrons more strongly from the central atom, leading to a more negative charge on the central atom. This can affect the overall electronic effect.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity will cause the molecule to become more polar, which can affect the overall electronic effect.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electronic effect.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electronic effect.
+
+To predict which molecule will react faster toward EAS (electron affinity), you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will generally lower the electron affinity of the molecule.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity can influence the electron affinity by affecting the overall polarity of the molecule.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule, which can affect the electron affinity.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electron affinity.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electron affinity.
+
+Without a visual representation of the molecules, I can't provide specific predictions. However, you can use these guidelines to analyze the substituents in the molecules and make educated guesses about their electronic effects and reaction rates."
+Morphine.png,Caffeine.png,baseline,"Which molecule is more reactive toward electrophilic aromatic substitution, the first or the second? Why?","The first aromatic position is more reactive toward electrophilic aromatic substitution than the second position. This is because the first aromatic position is part of a conjugated system, which increases the electron density and makes it more susceptible to electrophilic attack. The second position is not part of a conjugated system and has a lower electron density, making it less reactive."
+Morphine.png,Caffeine.png,stepwise,"First, note if the ring has electron-donating substituents. Then, note if it has electron-withdrawing substituents. Finally, determine which ring is more reactive toward electrophiles.","As an AI language model, I cannot see or analyze images. Please provide a description of the ring or the substituents, and I will help you determine which ring is more reactive toward electrophiles."
+Morphine.png,Caffeine.png,visual_first,"Observe visible features: are there -OH, -NH₂, or -NO₂ groups? Count and compare electron-donating versus electron-withdrawing groups for both molecules.","I'm sorry, but I cannot observe or analyze images. However, I can help you with the information you need to complete the task.
+
+To determine the presence of -OH, -NH₂, or -NO₂ groups, you can look at the functional groups in the molecule's skeletal structure. -OH groups are typically found in the presence of a carbon atom double-bonded to an oxygen atom, while -NH₂ groups are found in the presence of a nitrogen atom bonded to three hydrogen atoms and a carbon atom double-bonded to an oxygen atom. -NO₂ groups are found in the presence of a nitrogen atom double-bonded to an oxygen atom and a carbon atom bonded to two hydrogen atoms.
+
+To count and compare electron-donating versus electron-withdrawing groups, you can look at the electronegativity differences between the atoms in the molecule. Electron-donating groups typically have higher electronegativity than electron-withdrawing groups, and they can be identified by the presence of lone pairs of electrons on the atoms in the group. Electron-withdrawing groups typically have lower electronegativity than electron-donating groups, and they can be identified by the presence of multiple bonds between the atoms in the group.
+
+You can use the following electronegativity values as a reference:
+
+- OH: 3.4
+- NH₂: 3.0
+- NO₂: 3.0
+
+To compare the electron-donating versus electron-withdrawing groups, you can count the number of lone pairs of electrons in each group and compare the electronegativity values."
+Morphine.png,Caffeine.png,explanation_first,Consider the net electronic effect (donating vs withdrawing) based on the visible substituents. Then predict which molecule will react faster toward EAS.,"As a language and vision assistant, I can't directly view images or 3D structures of molecules. However, I can help you analyze the information you have and guide you in predicting the electronic effect and reaction rates.
+
+To predict the electronic effect based on the visible substituents, you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will pull electrons more strongly from the central atom, leading to a more negative charge on the central atom. This can affect the overall electronic effect.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity will cause the molecule to become more polar, which can affect the overall electronic effect.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electronic effect.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electronic effect.
+
+To predict which molecule will react faster toward EAS (electron affinity), you need to consider the following factors:
+
+1. **Electronegativity**: Substituents with higher electronegativity will generally lower the electron affinity of the molecule.
+
+2. **Polarity of Substituents**: Substituents with a higher degree of polarity can influence the electron affinity by affecting the overall polarity of the molecule.
+
+3. **Ring Substituents**: Substituents within the ring can influence the delocalization of electrons and the overall stability of the molecule, which can affect the electron affinity.
+
+4. **Conjugation**: If the substituents are part of a conjugated system, they can influence the delocalization of electrons and the overall electron affinity.
+
+5. **Hydrogen Bonding**: Substituents that can form hydrogen bonds can influence the overall electron affinity.
+
+Without a visual representation of the molecules, I can't provide specific predictions. However, you can use these guidelines to analyze the substituents in the molecules and make educated guesses about their electronic effects and reaction rates."
