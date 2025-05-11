@@ -78,13 +78,13 @@ The summary of the evaluation scores is as follows:
 
 
 
-<img src="../../img/general1.png" width="650">
+<img src="../../../img/general1.png" width="650">
 
 
 
 
 
-<img src="../../img/general2.png" width="550">
+<img src="../../../img/general2.png" width="550">
 
 By observing the statistical results, we can see that overall, accuracy scores of 0.5 or 1 are the most common. This indicates that the models were often able to identify part of the atoms or key structures in the images but still partially failed in recognition. At the same time, using CoT indeed helps improve image recognition. Although the number of cases where the correct molecular name was fully identified (i.e., perfect scores) does not differ significantly between the baseline and CoT approaches, the likelihood of receiving a score of 0 is greatly reduced. Specifically, the baseline model received a score of 0 in 34% of the cases, whereas with CoT, the highest proportion of 0 scores was no more than 27.1%.
 
@@ -98,11 +98,11 @@ We attempted to conduct a deeper analysis of the three models to examine the det
 
 #### LLaVA-Med
 
-<img src="../../img/med1.png" alt="med1" width="650">
+<img src="../../../img/med1.png" alt="med1" width="650">
 
 
 
-<img src="../../img/med2.png" width="550">
+<img src="../../../img/med2.png" width="550">
 
 By observing the statistical results, we can see that the accuracy score distribution for LLaVA-Med closely resembles the overall trends discussed in the previous section — using CoT structures generally helps improve the scoring rate. However, the performance of the explanation-first structure on LLaVA-Med diverges noticeably from the aggregated results: although its high-score rate (1.5/2) remains the highest among the three CoT approaches, its zero-score rate is nearly the same as the baseline, exceeding 50%, making it highly unstable. A possible explanation is that the explanation-first prompts require the model to elaborate on background chemical knowledge upfront, increasing prompt length and potentially compromising output quality, often yielding shorter and less complete responses. Moreover, the model may exhibit recency or positional bias, focusing on earlier input at the expense of critical task instructions later in the prompt, thereby adversely affecting performance.
 
@@ -114,9 +114,9 @@ In summary, LLaVA-Med’s overall performance is relatively poor, with a lower s
 
 #### DeepSeek-VL
 
-<img src="../../img/ds1.png" width="650">
+<img src="../../../img/ds1.png" width="650">
 
-<img src="../../img/ds2.png" width="550">
+<img src="../../../img/ds2.png" width="550">
 
 #### LLaVA-OneVision
 
