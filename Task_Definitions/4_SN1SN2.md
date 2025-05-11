@@ -18,13 +18,10 @@
 ---
 
 ## ✅ Top 3 Stepwise Prompts (Task 4)
-## ✅ Correct Top 3 Stepwise Prompts (by score table: #1, #2, #17)
 
-| Rank | Score Table Prompt # |Prompt Text                                                                                                                           | Reason for Selection                             |
-|------|----------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| 🥇   | 1                    |Analyze each molecule in steps. First, identify the leaving group. Then, consider how stable the carbocation would be if that group left. Finally, determine which molecule favors an SN1 mechanism. | Scored highest (2 full, 2 partial); clear structure |
-| 🥈   | 2                    |Step by step: (1) What’s the leaving group in each molecule? (2) If it leaves, how stable is the resulting carbocation? (3) Based on that, which molecule is more likely to follow SN1? | Clean logical decomposition of SN1 steps         |
-| 🥉   | 17                   |  Which molecule loses its leaving group more easily? Which forms a stable carbocation? Use these steps to predict which one undergoes SN1 more readily. | Strong completions on harder pairs; very concise |
-
----
+| Rank | Prompt # | Prompt Text                                                                                                                           | Reason for Selection                             |
+|------|----------|----------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
+| 🥇   | Prompt 1 | Analyze each molecule in steps. First, identify the leaving group. Then, consider how stable the carbocation would be if that group left. Finally, determine which molecule favors an SN1 mechanism. | Highest score overall (2 full + 2 partial); clear structure |
+| 🥈   | Prompt 2 | Step by step: (1) What’s the leaving group in each molecule? (2) If it leaves, how stable is the resulting carbocation? (3) Based on that, which molecule is more likely to follow SN1? | Strong logical breakdown of SN1 logic            |
+| 🥉   | Prompt 17 | Which molecule loses its leaving group more easily? Which forms a stable carbocation? Use these steps to predict which one undergoes SN1 more readily. | Compact wording; best performance on harder pairs |
 
