@@ -49,8 +49,8 @@ CoTs = ["Baseline", "Stepwise", "Visual_first", "Explanation_first"]
 
 # --- Step 3: Define Prompts (placeholder for now) ---
 prompts = [
-    "Which molecule is a stronger acid or base, the first or the second? Why?",  # Baseline
-    "Step 1: Examine the electron density of each molecule. Step 2: Identify atoms capable of donating a lone pair. Step 3: Consider resonance or inductive effects. Step 4: Compare steric hindrance. Step 5: Decide which molecule is the better nucleophile and explain why.",  # Stepwise
+    "Which molecule is a better nucleophile, the first or the second? Why?",  # Baseline
+    "Step-by-step: First, identify potential nucleophilic sites. Second, evaluate charge delocalization. Third, assess solvent effects if any are implied. Finally, choose the better nucleophile and explain your choice.",  # Stepwise
     "From the image, focus on the reactive centers. Do you see bulky groups that block attack? Do you see resonance that spreads out charge? Pick the more reactive nucleophile.",  # Visual-first
     "To decide which is more nucleophilic, we need to consider the atom's electron density, resonance stabilization, and any steric hindrance. Let's apply this reasoning to the two molecules." # Explanation-first
 ]
@@ -98,7 +98,7 @@ for img1_name, img2_name in image_pairs:
         })
 
 # --- Step 5: Save Results to CSV ---
-output_csv = "Task3_1V_outputs.csv"
+output_csv = "Task3_1V_outputs_FIXED.csv"
 with open(output_csv, mode="w", newline='', encoding="utf-8") as csvfile:
     fieldnames = ["image1", "image2", "prompt_type", "prompt_text", "generated_text"]
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
