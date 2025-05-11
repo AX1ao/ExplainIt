@@ -25,3 +25,15 @@
 | 🥈   | Prompt 2 | Step by step: (1) What’s the leaving group in each molecule? (2) If it leaves, how stable is the resulting carbocation? (3) Based on that, which molecule is more likely to follow SN1? | Strong logical breakdown of SN1 logic            |
 | 🥉   | Prompt 17 | Which molecule loses its leaving group more easily? Which forms a stable carbocation? Use these steps to predict which one undergoes SN1 more readily. | Compact wording; best performance on harder pairs |
 
+---
+
+## ✅ Top 3 Visual-First Prompts (Task 4)
+
+| Rank | Prompt # | Prompt Text                                                                                                                              | Reason for Selection                              |
+|------|----------|-------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
+| 🥇   | Prompt 1 | Look at the structure of both molecules. Which one has a group that looks easier to break off? Use this to decide which could follow an SN1 path. | Most balanced performance (1 good, 2 partial); directly targets leaving group |
+| 🥈   | Prompt 5 | Scan each molecule for ring structures or conjugated systems near the leaving group site. Which structure looks more capable of dispersing charge? | Strong conceptual grounding in SN1 (resonance/carbocation stability) |
+| 🥉   | Prompt 12 | Observe how isolated the leaving group appears in each structure. Which one looks more "exposed" or weakly connected — a possible sign of easier SN1 departure? | Good visual heuristic; performed well on simple examples like Aniline vs Phenol |
+
+---
+
