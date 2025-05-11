@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Batch Inference for Task 3 
+Batch Inference for Task 4 
 (10 Combined Images × 10 Prompts) using Llava-Med (via eval_model)
 """
 
@@ -20,8 +20,8 @@ from llava.mm_utils import get_model_name_from_path
 
 # === SETUP ===
 model_path = "microsoft/llava-med-v1.5-mistral-7b"
-image_folder = "/home/yx3493/llvm/T3/img"
-output_csv = "Task3_MED_outputs.csv"
+image_folder = "/home/yx3493/llvm/T4/img"
+output_csv = "Task4_MED_outputs.csv"
 
 image_files = [f"{i}.png" for i in range(1, 11)]
 
