@@ -17,11 +17,13 @@
 
 ---
 
-## ✅ Final Selected Prompts for Task 4
+## ✅ Top 3 Stepwise Prompts (Task 4)
 
-| Prompt Type         | Final Selected Prompt                                                                                                                                           | Abbr. Reason for Chosen                                     |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------|
-| **Baseline**        | "Which molecule is more likely to undergo an SN1 reaction, and why?" *(default)*                                                                                | Default phrasing; clean anchor for comparison                |
-| **Stepwise**        | "Let’s evaluate both molecules for SN1 reactivity: (i) Leaving group ability, (ii) Carbocation stability, (iii) Steric accessibility. Then decide which is more favorable." | Best overall structure + highest consistent usability        |
-| **Visual-First**    | "Identify any aromatic rings adjacent to the site of bond cleavage. Which molecule is better positioned to stabilize the resulting structure through resonance?" | One of few prompts that elicited molecule-specific logic     |
-| **Explanation-First** | "The best SN1 substrates are those where the leaving group leaves easily, and the molecule can stabilize the resulting positive charge. Based on this, which one is a better candidate?" | Only expl-first prompt with 1 good + 4 partial completions   |
+| Rank | Prompt # | Prompt Text                                                                                                                           | Reason for Selection                             |
+|------|----------|----------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
+| 🥇   | 1        | Let’s evaluate both molecules for SN1 reactivity: (i) Leaving group ability, (ii) Carbocation stability, (iii) Steric accessibility. Then decide which is more favorable. | Most consistent performance (3 partials + 2 full); clear and structured |
+| 🥈   | 17       | Step through the analysis: Evaluate each molecule’s leaving group, the stability of the intermediate carbocation, and the reaction conditions. Then select the more SN1-reactive one. | High-scoring in harder pairs; chemically relevant framing |
+| 🥉   | 2        | Let’s take it step-by-step: 1. Is the leaving group good? 2. What’s the class of carbocation (primary/secondary/tertiary)? 3. Is resonance a factor? 4. Decide SN1 reactivity. | Clean breakdown of SN1 logic; matches human reasoning flow |
+
+---
+
