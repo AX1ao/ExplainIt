@@ -37,3 +37,11 @@
 
 ---
 
+## ✅ Top 3 Explanation-First Prompts (Task 4)
+
+| Rank | Prompt # | Prompt Text                                                                                                                              | Reason for Selection                              |
+|------|----------|-------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
+| 🥇   | Prompt 14 | The best SN1 substrates are those where the leaving group leaves easily, and the molecule can stabilize the resulting positive charge. Based on this, which one is a better candidate? | Strongest performer overall (1 good + 4 partial); clear SN1 logic |
+| 🥈   | Prompt 3  | The more stable the carbocation intermediate, the more likely an SN1 mechanism will occur. Consider how the structure of each molecule affects the stability of its carbocation. | One perfect (2/2) and two partial completions     |
+| 🥉   | Prompt 9  | Molecules that undergo SN1 easily often contain benzylic or allylic positions that stabilize carbocations. Does either molecule contain such a feature? | Specific, well-scoped SN1 condition; consistently structured answers |
+
