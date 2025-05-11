@@ -83,7 +83,7 @@
 # 🧠 General Observations
 
 ### 📐 Formula
-`Success (Failure) Rate = (Number of responses scored 2 or 2*) / (or 0) / Total responses for that prompt type × 100%`
+`Success (Failure) Rate = (Number of responses scored 2 and 2* (or 0)) / Total responses for that prompt type × 100%`
 
 ---
 
