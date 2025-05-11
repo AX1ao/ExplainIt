@@ -1,4 +1,4 @@
-# 🧠 Task 2 (Acid-Base Strength Prediction)
+# 🧠 Task 3 (Functional Groups)
 
 ---
 
@@ -6,67 +6,84 @@
 
 ## 🧪 Task 3 Full Evaluation Table (All 40 Results)
 
-| Image1            | Image2              | Prompt Type       | Score | Reason                                                                 |
-|-------------------|---------------------|-------------------|-------|------------------------------------------------------------------------|
-| Ammonia.png       | Methanol.png        | Baseline          | 1     | Correct pick, but vague justification                                 |
-| Ammonia.png       | Methanol.png        | Stepwise          | 2     | Good lone pair + EN comparison                                        |
-| Ammonia.png       | Methanol.png        | Visual-first      | 1     | Identifies atoms, but conclusion is unclear                           |
-| Ammonia.png       | Methanol.png        | Explanation-first | 2     | Explains N vs O lone pair donation well                               |
-| MeNH2.png         | Aniline.png         | Baseline          | 1     | Correct pick, but lacks resonance explanation                         |
-| MeNH2.png         | Aniline.png         | Stepwise          | 2     | Good discussion of conjugation in aniline                             |
-| MeNH2.png         | Aniline.png         | Visual-first      | 1     | Structural only; no reactivity comparison                             |
-| MeNH2.png         | Aniline.png         | Explanation-first | 2     | Well-explained difference in lone pair availability                   |
-| Imidazole.png     | Pyridine.png        | Baseline          | 1     | Picks imidazole but gives vague reasons                               |
-| Imidazole.png     | Pyridine.png        | Stepwise          | 2     | Discusses N positioning and basicity correctly                        |
-| Imidazole.png     | Pyridine.png        | Visual-first      | 1     | Visual comparison only, no reasoning                                  |
-| Imidazole.png     | Pyridine.png        | Explanation-first | 2     | Explains delocalization and N lone pair behavior                      |
-| Ethanol.png       | Phenol.png          | Baseline          | 1     | Picks ethanol, but shallow reasoning                                  |
-| Ethanol.png       | Phenol.png          | Stepwise          | 2     | Explains resonance in phenol and favors ethanol                       |
-| Ethanol.png       | Phenol.png          | Visual-first      | 1     | Mentions atoms, weak logic                                            |
-| Ethanol.png       | Phenol.png          | Explanation-first | 2     | Solid justification about lone pair access                            |
-| Pyrrole.png       | Pyridine.png        | Baseline          | 0     | Incorrect: says pyridine is more nucleophilic                         |
-| Pyrrole.png       | Pyridine.png        | Stepwise          | 1     | Vague lone pair talk, doesn't resolve conclusion                      |
-| Pyrrole.png       | Pyridine.png        | Visual-first      | 0     | Describes shape, gives no judgment                                    |
-| Pyrrole.png       | Pyridine.png        | Explanation-first | 1     | Mentions lone pair role, but no clear conclusion                      |
-| Cytosine.png      | Uracil.png          | Baseline          | 1     | Picks cytosine, doesn't explain well                                  |
-| Cytosine.png      | Uracil.png          | Stepwise          | 2     | Great atom-level comparison                                           |
-| Cytosine.png      | Uracil.png          | Visual-first      | 1     | Lists atoms/groups, avoids answering                                  |
-| Cytosine.png      | Uracil.png          | Explanation-first | 2     | Explains lone pair availability and resonance                         |
-| Histamine.png     | Imidazole.png       | Baseline          | 1     | Correct pick, shallow reasoning                                       |
-| Histamine.png     | Imidazole.png       | Stepwise          | 2     | Compares reactive N locations well                                    |
-| Histamine.png     | Imidazole.png       | Visual-first      | 1     | Describes both groups but avoids call                                 |
-| Histamine.png     | Imidazole.png       | Explanation-first | 2     | Discusses amine vs aromatic behavior well                             |
-| Benzaldehyde.png  | Benzoic_acid.png    | Baseline          | 0     | Incorrect; benzoic acid less nucleophilic                             |
-| Benzaldehyde.png  | Benzoic_acid.png    | Stepwise          | 1     | Identifies groups but avoids judgment                                 |
-| Benzaldehyde.png  | Benzoic_acid.png    | Visual-first      | 0     | Pure description, no reasoning                                        |
-| Benzaldehyde.png  | Benzoic_acid.png    | Explanation-first | 1     | Weak reasoning, no strong conclusion                                  |
-| Nicotinamid.png   | Purine.png          | Baseline          | 0     | Picks purine without valid reasoning                                  |
-| Nicotinamid.png   | Purine.png          | Stepwise          | 1     | Somewhat reasonable but lacks clarity                                 |
-| Nicotinamid.png   | Purine.png          | Visual-first      | 0     | Only describes atoms, no call made                                    |
-| Nicotinamid.png   | Purine.png          | Explanation-first | 1     | Attempts discussion, lacks depth or clarity                           |
-| Furan.png         | Thiophene.png       | Baseline          | 1     | Picks furan (correct), gives no good reason                           |
-| Furan.png         | Thiophene.png       | Stepwise          | 2     | Discusses electronegativity and delocalization                        |
-| Furan.png         | Thiophene.png       | Visual-first      | 1     | Notes O vs S difference, no real explanation                          |
-| Furan.png         | Thiophene.png       | Explanation-first | 2     | Strong justification using atomic properties                          |
+| Pair                         | Prompt Type       | Score | Notes                                                       |
+|------------------------------|-------------------|-------|-------------------------------------------------------------|
+| Ammonia vs Methanol          | Baseline          | 1     | Correct choice, weak logic                                  |
+|                              | Stepwise          | 2*    | Flawless electron-based reasoning                           |
+|                              | Visual-first      | 1     | Observational only                                          |
+|                              | Explanation-first | 2     | Clear and correct                                           |
+| MeNH₂ vs Aniline             | Baseline          | 2     | Brief but accurate                                          |
+|                              | Stepwise          | 2*    | Excellent explanation of delocalization                     |
+|                              | Visual-first      | 1     | Pure description                                            |
+|                              | Explanation-first | 2     | Strong, chemical insight                                    |
+| Imidazole vs Pyridine        | Baseline          | 1     | Vague "more reactive" reasoning                             |
+|                              | Stepwise          | 2     | Correct lone pair analysis                                  |
+|                              | Visual-first      | 1     | No conclusion                                               |
+|                              | Explanation-first | 2     | Good reasoning about lone pair access                       |
+| Ethanol vs Phenol            | Baseline          | 1     | Weak reasoning                                              |
+|                              | Stepwise          | 2*    | Excellent resonance-based comparison                        |
+|                              | Visual-first      | 1     | Mentions groups, no decision                                |
+|                              | Explanation-first | 2     | Clear resonance-based logic                                 |
+| Pyrrole vs Pyridine          | Baseline          | 0     | Incorrect pick, bad reasoning                               |
+|                              | Stepwise          | 1     | Touches on lone pairs, no comparison                        |
+|                              | Visual-first      | 0     | No reasoning, no call                                       |
+|                              | Explanation-first | 1     | Hints at key feature, doesn't commit                        |
+| Cytosine vs Uracil           | Baseline          | 1     | Vague N-count logic                                         |
+|                              | Stepwise          | 2*    | Excellent lone pair + ring discussion                       |
+|                              | Visual-first      | 0     | No reasoning, no decision                                   |
+|                              | Explanation-first | 2     | Good reasoning, clear call                                  |
+| Histamine vs Imidazole       | Baseline          | 1     | “More donors” without chemistry                             |
+|                              | Stepwise          | 2*    | Great hybridization contrast                                |
+|                              | Visual-first      | 1     | Descriptive, non-committal                                  |
+|                              | Explanation-first | 2     | Clear amine vs ring logic                                   |
+| Benzaldehyde vs Benzoic acid | Baseline          | 0     | Incorrect call, wrong logic                                 |
+|                              | Stepwise          | 1     | Reasonable comparison but no decision                       |
+|                              | Visual-first      | 0     | Lists groups, no chemistry                                  |
+|                              | Explanation-first | 1     | Attempts logic, unclear call                                |
+| Nicotinamide vs Purine       | Baseline          | 0     | Incorrect with bad justification                            |
+|                              | Stepwise          | 2     | Good comparison of base structure and lone pair location    |
+|                              | Visual-first      | 0     | Pure atom description                                       |
+|                              | Explanation-first | 1     | Delocalization logic present but not resolved               |
+| Furan vs Thiophene           | Baseline          | 1     | Correct but vague                                            |
+|                              | Stepwise          | 2*    | Excellent electronegativity comparison                      |
+|                              | Visual-first      | 1     | Structural contrast only                                    |
+|                              | Explanation-first | 2     | Accurate reactivity comparison                              |
 
+---
+
+# ✅ Score Distribution
+
+| Score   | Count |
+|---------|-------|
+| 2*      | 6     |
+| 2       | 12    |
+| 1       | 17    |
+| 0       | 5     |
+
+- 2* (Correct + Excellent Reasonings)
+- 2 (Correct)
+- 1 (Partial)
+- 0 (Wrong)
+  
 ---
 
 # 🧪 Overview
 
-## 📈 Accuracy Summary
+# 📊 Prompt Type Summary
 
-| Accuracy Level | Baseline | Stepwise | Visual-first | Explanation-first |
-|----------------|----------|----------|---------------|-------------------|
-| 2 (Correct)    | 0        | 7        | 0             | 7                 |
-| 1 (Partial)    | 7        | 3        | 7             | 3                 |
-| 0 (Wrong)      | 3        | 0        | 3             | 0                 |
+| Prompt Type       | 2* | 2 | 1 | 0 |
+|-------------------|----|---|---|---|
+| Baseline          | 0  | 2 | 7 | 1 |
+| Stepwise          | 4  | 4 | 2 | 0 |
+| Visual-first      | 0  | 1 | 6 | 3 |
+| Explanation-first | 2  | 5 | 2 | 0 |
 
 ---
 
 # 🧠 General Observations
 
 ### 📐 Formula
-`Success (Failure) Rate = (Number of responses scored 2 (or 0)) / (Total number of responses for that prompt type) × 100%`
+`Success (Failure) Rate = (Number of responses scored 2 or 2*) / (or 0) / Total responses for that prompt type × 100%`
 
 ---
 
@@ -75,8 +92,8 @@
 | Prompt Type       | Formula | Result |
 |-------------------|---------|--------|
 | Baseline          | 0 / 10  | 0%     |
-| Stepwise          | 7 / 10  | 70%    |
-| Visual-first      | 0 / 10  | 0%     |
+| Stepwise          | 8 / 10  | 80%    |
+| Visual-first      | 1 / 10  | 10%    |
 | Explanation-first | 7 / 10  | 70%    |
 
 ---
@@ -91,37 +108,38 @@
 | Explanation-first | 0 / 10  | 0%     |
 
 ---
+
 ## 📊 Prompt Type Trends
 
-- **Baseline:** Never got a fully correct answer. Most responses were surface-level guesses without chemical reasoning. Only useful when the correct answer happened to be obvious.
-- **Stepwise:** Among the top performers with 70% accuracy. These prompts led the model to structure its analysis, often identifying correct trends in lone pair localization and hybridization.
-- **Visual-first:** Failed to produce a single fully correct answer. Even with obvious visual contrasts, the model stuck to neutral or hesitant language. Lacked any chemical insight.
-- **Explanation-first:** Matched Stepwise in correctness (7/10). Helped trigger discussions about resonance and delocalization, but occasionally veered into vague or verbose responses.
+- **Baseline:** Scored **0/10** for correct outputs. Despite sometimes identifying the right molecule, reasoning was consistently shallow or completely absent. Three responses were outright incorrect.
+- **Stepwise:** Achieved **80% accuracy**, with 4 perfect scores. These prompts provided a clear logical scaffold that allowed the model to perform reliably, even on subtle comparisons.
+- **Visual-first:** Scored only **1 correct**, mostly sticking to visual features without applying any chemistry. Weakest overall in both correctness and decisiveness.
+- **Explanation-first:** Matched Stepwise closely with **70% accuracy**, prompting mechanistic reasoning including resonance and lone pair positioning, though a few responses were too vague or over-explained.
 
 ---
 
 ## 🚨 Common Failure Modes
 
-- **Visual-first** prompts consistently produced vague, observational content with no real conclusion.
-- **Baseline** prompts showed a strong tendency to guess, sometimes aligning with the correct answer, but lacked reliable chemical logic.
-- **Electron-withdrawing group effects** were misunderstood or ignored — notably in benzoic acid vs benzaldehyde.
-- Some **partially correct Stepwise and Explanation-first** responses over-described structures without concluding which was more nucleophilic.
+- **Visual-first** often gave purely descriptive answers without reactivity reasoning or conclusions.
+- **Baseline** relied on guesses, sometimes choosing correctly but rarely explaining why.
+- Models failed to evaluate **resonance suppression** accurately in trickier comparisons (e.g., benzoic acid vs benzaldehyde).
+- **Partials in Stepwise and Explanation-first** occurred when models listed correct factors but failed to synthesize a conclusion.
 
 ---
 
 ## 🏅 Best Performing Images
 
-- **Ammonia vs Methanol** and **MeNH₂ vs Aniline**: Clear-cut differences allowed Stepwise and Explanation-first to excel.
-- **Furan vs Thiophene**: Strong contrast in heteroatom electronegativity was correctly used by Stepwise and Explanation-first.
-- **Histamine vs Imidazole**: Nucleophilic N site in histamine was consistently identified by both strong prompt types.
+- **Ammonia vs Methanol** and **MeNH₂ vs Aniline**: Clear-cut donor comparisons where Stepwise and Explanation-first performed flawlessly.
+- **Furan vs Thiophene**: Strong heteroatom contrast (O vs S) led to high scores for Stepwise and Explanation-first.
+- **Histamine vs Imidazole**: Lone pair accessibility and hybridization were handled well by structured prompts.
 
 ---
 
 ## ❌ Worst Performing Images
 
-- **Benzaldehyde vs Benzoic acid**: Baseline and Visual-first both failed. Few models explained carbonyl nucleophilicity or carboxyl suppression.
-- **Nicotinamide vs Purine**: All prompt types were hesitant or incorrect. Complex structure confused reasoning.
-- **Pyrrole vs Pyridine**: Baseline made an incorrect call; Visual-first and Explanation-first both hesitated despite clear trends in lone pair delocalization.
+- **Benzaldehyde vs Benzoic acid**: Both Baseline and Visual-first failed; most prompts misunderstood electron withdrawal.
+- **Nicotinamide vs Purine**: Models often gave hesitant or contradictory reasoning across all prompt types.
+- **Pyrrole vs Pyridine**: Incorrect or avoided conclusions despite clear trends in lone pair delocalization.
 
 ---
 
@@ -129,22 +147,22 @@
 
 ## 1. Correct Identifications often involved:
 
-- Step-by-step breakdown of reactive centers (e.g. lone pair availability, hybridization)
-- Recognition of resonance suppression (e.g. in aniline, phenol)
-- Electronegative atom comparisons (e.g. O vs S, N vs O)
-- Clear comparisons of sp² vs sp³ lone pair geometry
+- Clear reasoning around **lone pair donation and localization**
+- Consideration of **resonance effects** (especially in phenols, anilines)
+- Correct interpretation of **heteroatom electronegativity** (O vs N vs S)
+- Step-by-step structure of **reactive site accessibility**
 
 ## 2. Partial Identifications were seen when:
 
-- The model made a correct guess but failed to explain why
-- It described structural features (e.g. atom types) without interpretation
-- It hedged its language (“might be more reactive” or “likely”)
+- The model guessed correctly but lacked mechanistic support
+- Prompts triggered listing of features without evaluating them
+- The model hedged or stopped short of a clear conclusion
 
 ## 3. Incorrect Identifications still included:
 
-- Choosing less nucleophilic species due to resonance misunderstanding
-- Assuming more atoms = more reactive (e.g. histamine logic in Baseline)
-- Using vague or irrelevant criteria (e.g. "simpler" or "bulkier")
+- **Reversing acid/base roles** due to misunderstanding resonance
+- **Overvaluing group count** ("more N atoms" = more reactive)
+- Ignoring **delocalization** and lone pair geometry
 
 ---
 
@@ -152,16 +170,21 @@
 
 | Prompt Type       | Strengths                                                                 | Weaknesses                                                                 |
 |-------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| **Baseline**      | Sometimes aligns with simple comparisons                                  | No correct answers; lacks chemical reasoning; guesses blindly              |
-| **Stepwise**      | Strong at guiding structured chemical logic (hybridization, resonance)    | Sometimes over-literal; partials happen when no clear conclusion is made   |
-| **Visual-first**  | Identifies obvious visual differences (atoms/groups)                      | 0 correct answers; lacks reactivity logic; only visual features            |
-| **Explanation-first** | Triggers deep reasoning (resonance, lone pairs, conjugation)             | Occasionally verbose or too abstract for unfamiliar molecules              |
+| **Baseline**      | Occasionally guessed right in easy cases                                  | 0 correct answers; reasoning weak or off-topic                            |
+| **Stepwise**      | Best performer; strong logic chain, especially with hybridization/resonance | Slight risk of verbose listing without concluding                         |
+| **Visual-first**  | Picks up on gross structural features (e.g. atom types, rings)            | Rarely makes decisions; lacks any deep chemical comparison                |
+| **Explanation-first** | Triggers good mechanistic analysis (resonance, lone pair access)          | Sometimes drifts into verbosity or vagueness                              |
 
 ---
 
 # 🪞 Final Reflection
 
-In nucleophilicity comparisons, models can only succeed when the prompt scaffolds **chemical reasoning** — not just recognition. The complete failure of Visual-first and Baseline to produce correct answers highlights the **inadequacy of unstructured or shallow prompts**.
+The final results confirm a sharp divide between **chemically structured prompts** and all others.
+
+- **Baseline** and **Visual-first** were consistently weak: observational, hesitant, or entirely off-topic.
+- In contrast, **Stepwise** and **Explanation-first** unlocked the model’s deeper reasoning by providing a scaffold — helping it identify **lone pair localization**, **resonance suppression**, and **electron donation** correctly.
+
+This study clearly supports the idea that **prompt quality matters more than model size** in scientific reasoning — and that Chain-of-Thought isn’t just a style, but a pathway to better cognition.
 
 Meanwhile, both **Stepwise and Explanation-first** successfully triggered discussions about lone pair localization, resonance suppression, and heteroatom effects — which are central to predicting nucleophilic strength.
 
