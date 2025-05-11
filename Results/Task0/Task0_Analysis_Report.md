@@ -78,13 +78,13 @@ The summary of the evaluation scores is as follows:
 
 
 
-<img src="../../img/general1.png" width = "650px">
+<img src="../../img/t0/general1.png" width = "650px">
 
 
 
 
 
-<img src="../../img/general2.png" width = "550px">
+<img src="../../img/t0/general2.png" width = "550px">
 
 By observing the statistical results, we can see that overall, accuracy scores of 0.5 or 1 are the most common. This indicates that the models were often able to identify part of the atoms or key structures in the images but still partially failed in recognition. At the same time, using CoT indeed helps improve image recognition. Although the number of cases where the correct molecular name was fully identified (i.e., perfect scores) does not differ significantly between the baseline and CoT approaches, the likelihood of receiving a score of 0 is greatly reduced. Specifically, the baseline model received a score of 0 in 34% of the cases, whereas with CoT, the highest proportion of 0 scores was no more than 27.1%.
 
@@ -98,11 +98,11 @@ We attempted to conduct a deeper analysis of the three models to examine the det
 
 #### LLaVA-Med
 
-<img src="../../img/med1.png" width = "600px">
+<img src="../../img/t0/med1.png" width = "600px">
 
 
 
-<img src="../../img/med2.png" width = "550px">
+<img src="../../img/t0/med2.png" width = "550px">
 
 By observing the statistical results, we can see that the accuracy score distribution for LLaVA-Med closely resembles the overall trends discussed in the previous section — using CoT structures generally helps improve the scoring rate. However, the performance of the explanation-first structure on LLaVA-Med diverges noticeably from the aggregated results: although its high-score rate (1.5/2) remains the highest among the three CoT approaches, its zero-score rate is nearly the same as the baseline, exceeding 50%, making it highly unstable. A possible explanation is that the explanation-first prompts require the model to elaborate on background chemical knowledge upfront, increasing prompt length and potentially compromising output quality, often yielding shorter and less complete responses. Moreover, the model may exhibit recency or positional bias, focusing on earlier input at the expense of critical task instructions later in the prompt, thereby adversely affecting performance.
 
@@ -114,9 +114,9 @@ In summary, LLaVA-Med’s overall performance is relatively poor, with a lower s
 
 #### DeepSeek-VL
 
-<img src="../../img/ds1.png" width = "600px">
+<img src="../../img/t0/ds1.png" width = "600px">
 
-<img src="../../img/ds2.png" width = "550px">
+<img src="../../img/t0/ds2.png" width = "550px">
 
 Compared to LLaVA-Med, the DeepSeek-VL model demonstrates significantly better overall performance. First, even the worst-case scenario — baseline — only has a 20% rate of zero scores, already a substantial improvement. More importantly, all CoT prompting strategies show increases in the proportion of high scores (1.5 or 2.0), indicating stronger capabilities in recognizing chemical structures under guided reasoning.
 
@@ -129,7 +129,15 @@ Looking at the hedging scores, similar to LLaVA-Med, we can conclude that using 
 In summary, explanation-first emerges as the best-performing CoT structure on DeepSeek-VL, resolving the instability (high zero-score rate) observed in other models. Visual-first remains a strong runner-up, achieving the highest non-low-score (1.0 and above) rate across the board. This suggests that DeepSeek-VL benefits from both detailed reasoning and visual pattern matching, and is robust to different prompt designs when paired with well-structured CoT strategies.
 
 #### LLaVA-OneVision
+<img src="../../img/t0/onevision1.png" width = "600px">
 
+<img src="../../img/t0/onevision2.png" width = "550px">
+
+Among the three models, LLaVA-OneVision demonstrates the narrowest accuracy score distribution and exhibits some extreme patterns. Most notably, no outputs under any CoT structure received a perfect score of 2.0, which is in stark contrast to the other models. This may partially be due to the smaller evaluation sample size (19 images), which increases the impact of outliers.
+
+Despite this, the benefit of using CoT prompting remains clearly observable. However, a notable limitation of this model is its strong concentration of low scores. For all CoT types, over 50% of responses fall into the 0.5 band, indicating only little recognition. Among the CoT strategies: Visual-first again stands out with the most balanced performance, achieving relatively strong results across all score bands except 2.0. Stepwise performs similarly but shows slightly fewer mid-to-high scores. Explanation-first, in contrast to its strong performance on DeepSeek-VL, delivers limited benefit here, with 73.7% of its scores stuck at 0.5 — the highest among all CoT structures on this model.
+
+In terms of hedging behavior, LLaVA-OneVision's baseline already demonstrates a high degree of linguistic caution, with 17 out of 19 outputs using uncertainty expressions. This suggests that LLaVA-OneVision may have stronger defaults for calibrated language or has been trained on data that promotes epistemic humility.
 
 
 ### Additional Analysis
