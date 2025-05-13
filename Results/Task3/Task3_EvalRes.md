@@ -112,15 +112,15 @@
 | Image Pair                | Prompt Type       | Score | Reason                                                                 |
 |--------------------------|-------------------|-------|------------------------------------------------------------------------|
 | NH₂⁻ vs OH⁻              | Baseline          | 2     | Picks NH₂⁻ and gives basic reasoning on nitrogen                       |
-| NH₂⁻ vs OH⁻              | Stepwise          | 0     | Missing output                                                        |
+| NH₂⁻ vs OH⁻              | Stepwise          | 2     | Describes lone pair availability and compares electronegativity        |
 | NH₂⁻ vs OH⁻              | Visual            | 1     | Mentions reactive centers, logic unclear                              |
 | NH₂⁻ vs OH⁻              | Explanation       | 2*    | Clear explanation of electronegativity and lone pair reactivity       |
 | Methylamine vs Pyridine  | Baseline          | 2     | Picks correctly, says NH₂ more reactive                                |
-| Methylamine vs Pyridine  | Stepwise          | 0     | Missing output                                                        |
+| Methylamine vs Pyridine  | Stepwise          | 2     | Discusses lone pair delocalization in pyridine vs methylamine         |
 | Methylamine vs Pyridine  | Visual            | 1     | Points out groups, no clear conclusion                                |
 | Methylamine vs Pyridine  | Explanation       | 2*    | Describes lone pair resonance in pyridine vs localized in MeNH₂       |
 | Pyrazine vs Pyridine     | Baseline          | 0     | Incorrect: says methylation increases nucleophilicity                 |
-| Pyrazine vs Pyridine     | Stepwise          | 0     | Missing output                                                        |
+| Pyrazine vs Pyridine     | Stepwise          | 2     | Correctly favors pyridine, explains sterics and lone pair location    |
 | Pyrazine vs Pyridine     | Visual            | 0     | Same as baseline — incorrect                                          |
 | Pyrazine vs Pyridine     | Explanation       | 2     | Picks correctly and explains resonance and steric hindrance           |
 | Piperidine vs Morpholine | Baseline          | 2     | Picks piperidine with vague justification                             |
@@ -128,7 +128,7 @@
 | Piperidine vs Morpholine | Visual            | 1     | Describes groups, avoids conclusion                                   |
 | Piperidine vs Morpholine | Explanation       | 2*    | Clear logic on oxygen withdrawing e⁻ from nitrogen                    |
 | Methoxide vs Acetate     | Baseline          | 2     | Picks correctly, briefly mentions resonance                           |
-| Methoxide vs Acetate     | Stepwise          | 0     | Missing output                                                        |
+| Methoxide vs Acetate     | Stepwise          | 2     | Correctly explains resonance in acetate vs charge localization in CH₃O⁻ |
 | Methoxide vs Acetate     | Visual            | 1     | Identifies groups, guesses correctly                                  |
 | Methoxide vs Acetate     | Explanation       | 2*    | Strong explanation of charge delocalization and nucleophilicity       |
 | 2-aminobenzimide vs 2-nitrobenzoic acid | Baseline          | 2     | Picks correctly, shallow but directionally valid                      |
@@ -136,7 +136,7 @@
 | 2-aminobenzimide vs 2-nitrobenzoic acid | Visual            | 1     | Structural guess without mechanism                                    |
 | 2-aminobenzimide vs 2-nitrobenzoic acid | Explanation       | 2*    | Excellent discussion of lone pairs and EWG effects                    |
 | 4-chloro-2-nitrobenzaldehyde vs 4-aminophenol | Baseline     | 2     | Picks amino compound, limited reasoning                              |
-| 4-chloro-2-nitrobenzaldehyde vs 4-aminophenol | Stepwise     | 0     | Missing                                                               |
+| 4-chloro-2-nitrobenzaldehyde vs 4-aminophenol | Stepwise     | 2     | Chooses aminophenol, explains EDG vs EWG and lone pair donation       |
 | 4-chloro-2-nitrobenzaldehyde vs 4-aminophenol | Visual       | 1     | Correct direction, lacks justification                               |
 | 4-chloro-2-nitrobenzaldehyde vs 4-aminophenol | Explanation   | 2*    | Excellent EDG vs EWG comparison                                       |
 | Dimethylhydroquinone vs Catechol     | Baseline          | 2     | Picks catechol, explains position effect                              |
@@ -148,7 +148,7 @@
 | 2-aminobenzimide vs Imidazole         | Visual            | 0     | Wrong guess based on appearance                                       |
 | 2-aminobenzimide vs Imidazole         | Explanation       | 2     | Picks correctly, explains lone pair availability                      |
 | DTT vs Catechol                       | Baseline          | 2     | Chooses DTT and mentions thiol reactivity                             |
-| DTT vs Catechol                       | Stepwise          | 0     | Missing                                                               |
+| DTT vs Catechol                       | Stepwise          | 2     | Notes SH as softer and more polarizable than OH                      |
 | DTT vs Catechol                       | Visual            | 1     | Identifies SH groups only                                             |
 | DTT vs Catechol                       | Explanation       | 2*    | Great polarizability and reactivity comparison                        |
 
