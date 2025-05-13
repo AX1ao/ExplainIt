@@ -74,7 +74,10 @@
 | Thymine.png               | Stepwise            | Partial nucleobase recognition                         | ⚠️ Partially Correct  |
 | Thymine.png               | Visual-first        | Correctly identified nucleobase features               | ✅ Correct             |
 | Thymine.png               | Explanation-first   | Correctly identified nucleobase features               | ✅ Correct             |
-| Tryptophan.png            | Baseline            | Misidentified as amine compound                        | ❌ Incorrect
+| Tryptophan.png         | Baseline           | Misidentified as amine compound (Aspartic acid)      | ❌ Incorrect          |
+| Tryptophan.png         | Stepwise           | Recognized partial features, failed to conclude      | ⚠️ Partially Correct  |
+| Tryptophan.png         | Visual-first       | Recognized indole-like shape, no full conclusion     | ⚠️ Partially Correct  |
+| Tryptophan.png         | Explanation-first  | Misidentified as Phenylalanine                       | ❌ Incorrect          |
 
 ---
 
