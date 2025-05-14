@@ -1,92 +1,116 @@
-# 📄 Project Objectives
+# 🧪 Chain-of-Thought Prompting for Chemistry Reasoning in VLMs
 
-The goal of this project is to systematically evaluate the impact of Chain-of-Thought (CoT) prompting structures on the performance of state-of-the-art vision-language models in chemistry-focused reasoning tasks. Specifically, we aim to:
+This project investigates how different Chain-of-Thought (CoT) prompting structures affect the reasoning abilities of state-of-the-art vision-language models (VLMs) on a suite of chemistry-focused image-based tasks.
 
-- **Compare model performance** across three modern multimodal models — **LLaVA-OneVision**, **Microsoft LLaVA-Med**, and **DeepSeek-VL** — on a curated set of molecule-related image tasks.
-- **Assess the effectiveness of CoT prompting** by testing three distinct CoT structures alongside a baseline (no CoT) for each task.
-- **Analyze task difficulty and model robustness** by covering five types of chemistry reasoning tasks, ranging from simple molecule identification to complex mechanistic predictions.
-- **Quantitatively evaluate outputs** using a standardized scoring rubric (0 = incorrect, 1 = partially correct, 2 = correct), enabling consistent cross-model and cross-task comparisons.
-- **Identify trends** in how different models and prompting strategies affect reasoning quality, factual accuracy, and error patterns in chemistry-specific contexts.
+---
 
-# 📄 Expected Deliverables
+## 📌 Project Objectives
 
-By the end of the project, we expect to deliver:
+We systematically evaluate:
 
-- **Prompt Set:**  
-  A refined set of baseline and CoT prompts tailored for five molecule-related reasoning tasks.
+- **Model performance across VLMs**, including **LLaVA-OneVision**, **LLaVA-Med (Microsoft)**, and **DeepSeek-VL**, using curated molecule diagrams as input.
+- **Prompt structure effectiveness** by comparing three CoT formats—**Stepwise**, **Visual-first**, and **Explanation-first**—against a **baseline (no CoT)** format.
+- **Task-specific performance** across five types of chemistry reasoning, from visual recognition to mechanistic inference.
+- **Output accuracy and reasoning quality** using a human-rated rubric (0 = incorrect, 1 = partial, 2 = correct), allowing consistent scoring across prompts, tasks, and models.
+- **Trends and failure modes**, identifying which CoT formats and models produce reliable scientific reasoning and which fall back on heuristics or hallucinations.
 
-- **Inference Results:**  
-  Model outputs for every combination of model, task, and prompting style, organized systematically.
+---
 
-- **Graded Dataset:**  
-  Human-annotated scores (0/1/2) for all outputs, indicating the correctness of each model's reasoning.
+## 📦 Deliverables
 
-- **Data Analysis Report:**  
-  - Statistical summaries of model accuracy across different tasks and prompt structures.
-  - Comparative analysis identifying which CoT structures (if any) significantly improve model performance.
-  - Observations on task difficulty trends and model-specific strengths and weaknesses.
+- **✅ Prompt Set**  
+  A curated collection of prompts (baseline and CoT) for five chemistry tasks.
 
-- **Discussion of Findings:**  
-  A high-level interpretation of the results, including insights into:
-  - The role of CoT prompting in multimodal scientific reasoning.
-  - Model-specific behaviors and failure modes.
-  - Recommendations for future prompt engineering in chemical and scientific domains.
+- **✅ Inference Results**  
+  Model outputs for each prompt-task-model combination, stored as structured `.csv` files.
 
-# ✅ Summary of Setup
+- **✅ Graded Dataset**  
+  Human-annotated scores (0–2) for all model outputs, including qualitative notes on reasoning.
 
-## Models:
-- LLaVA-OneVision
-- Microsoft LLaVA-Med
-- DeepSeek-VL
+- **✅ Data Analysis Report**  
+  - Accuracy comparisons across models and prompt types  
+  - Identification of effective prompt structures  
+  - Observations on task complexity and model robustness
 
-## Tasks (per model):
-- **Task 0:** Identify molecule (baseline)
-- **Task 1:** EAS (Electrophilic Aromatic Substitution prediction)
-- **Task 2:** Acid/Base analysis
-- **Task 3:** Functional group identification
-- **Task 4:** SN1/SN2 mechanism prediction
+- **✅ Findings and Recommendations**  
+  Summary discussion on:
+  - How CoT prompting influences multimodal scientific reasoning
+  - Common reasoning failures and speculation patterns
+  - Implications for future prompt design in scientific domains
 
-## Prompt types:
-- Baseline (no CoT)
-- 3 CoT styles (Stepwise, Visual-first, Explanation-first)
+---
 
-## Scoring rubric:
-- 0 = Wrong
-- 1 = Partially correct
-- 2 = Fully correct
+## ⚙️ Setup Overview
 
-## Folder Structure:
+### 🔍 Models Evaluated
+- `LLaVA-OneVision`  
+- `LLaVA-Med` (v1.5 Mistral, biomedical)  
+- `DeepSeek-VL` (multilingual vision-language model)
+
+### 🧪 Tasks (for each model)
+| Task ID | Task Description |
+|---------|------------------|
+| Task 0  | Molecule identification |
+| Task 1  | EAS (Electrophilic Aromatic Substitution) reactivity |
+| Task 2  | Acid/Base strength comparison |
+| Task 3  | Nucleophilicity (functional group reactivity) |
+| Task 4  | SN1 reaction likelihood |
+
+### 💬 Prompt Structures
+- `Baseline` (no CoT)
+- `Stepwise`
+- `Visual-first`
+- `Explanation-first`
+
+### 🧮 Scoring Rubric
+| Score | Meaning |
+|-------|---------|
+| 0     | Incorrect or off-topic answer |
+| 1     | Partially correct, incomplete or shallow reasoning |
+| 2     | Fully correct with sound reasoning |
+
+---
+
+## 📁 Repository Structure
 
 ```
 .
-├── Dataset/
-│   ├── 0_Identify/
-│   ├── Task1/
-│   :
-│   :── store [.png] molecule structure images
-│   :
-│   ├── *.png (additional molecule images)
-│   └── difficulty of telling the compounds.txt
-├── Results/
-│   ├── Task0/
-│   :
-│   :── store [outputs.csv] and [eval.md] files
-│   :
-│   └── Task4/
-├── Scripts/
-│   ├── Task0/
-│   :
-│   :── store [run_tasks.py] and [finetune_prompts.py] files
-│   :
-│   └── Task4/
-├── Task_Definitions/
+├──Analysis/      # store all result evaluations & analysis guideline doc
+│   ├── Analysis_Design_Doc.md
+│   ├── Task0_1V_EvalRes.md
+│   ├── Task1_EvalRes.md
+│   ├── Task2_EvalRes.md
+│   ├── Task3_EvalRes.md
+│   └── Task4_EvalRes.md
+├── Dataset/      # stores all images in .png
+│   ├── All
+│   ├── Task0
+│   ├── Task1
+│   ├── Task2
+│   ├── Task3
+│   └── Task4
+├── Results/      # stores all results in .csv/.txt/xlsx
+│   ├── Task0
+│   ├── Task1
+│   ├── Task2
+│   ├── Task3
+│   └── Task4
+├── Scripts/      # stores all .py code scripts for finetuning prompts and running tasks on models
+│   ├── Task0
+│   ├── Task1
+│   ├── Task2
+│   ├── Task3
+│   └── Task4
+├── Task_Definitions/    # what each task is about, images used, prompts selected
 │   ├── 0_Identify.md
-│   :
-│   :── store [tasks.md] files for task definitions + chosen [prompts + images]
-│   :
+│   ├── 1_EAS.md
+│   ├── 2_AcidBase.md
+│   ├── 3_FunctionalGroups.md
 │   ├── 4_SN1SN2.md
 │   ├── meta.csv
 │   └── pair_list.csv
+├── Img/       # figures
+│   ├── ...
 ├── .gitignore
 └── README.md
 ```
