@@ -48,8 +48,9 @@ This document outlines the two types of analyses to be conducted:
 ## 🧩 Part II. Exploratory, Emergent Analyses
 
 ### 4. Prompt Robustness Across Tasks
-**Goal:** Identify CoT types that generalize across task types.  
+**Goal:** Identify CoT types that generalize across task types.
 **Instructions:**
+
 - For each task, determine which CoT category had the best performance.
 - Count wins per CoT style across tasks.
 - Output: Heatmap or matrix of CoT-style effectiveness by task.
@@ -57,8 +58,9 @@ This document outlines the two types of analyses to be conducted:
 ---
 
 ### 5. Failure Mode Analysis
-**Goal:** Understand how different prompts fail.  
+**Goal:** Understand how different prompts fail. 
 **Instructions:**
+
 - Manually examine incorrect generations.
 - Tag common error types:
   - ❌ Wrong chemical concept
@@ -71,8 +73,9 @@ This document outlines the two types of analyses to be conducted:
 ---
 
 ### 6. Confidence vs Accuracy Trends
-**Goal:** Explore whether models sound confident even when wrong.  
+**Goal:** Explore whether models sound confident even when wrong. 
 **Instructions:**
+
 - If GPT-4o scores include confidence, plot confidence vs correctness.
 - Alternatively, rate confidence manually (e.g., high/medium/low).
 - Compare across CoT types and models.
@@ -81,8 +84,9 @@ This document outlines the two types of analyses to be conducted:
 ---
 
 ### 7. Model Sensitivity to CoT Prompting
-**Goal:** Measure performance gain from baseline to best CoT per model.  
+**Goal:** Measure performance gain from baseline to best CoT per model. 
 **Instructions:**
+
 - For each model and task:
   - Compute delta = Best CoT score – Baseline score.
 - Output: Heatmap showing "CoT gain" across models and tasks.
@@ -90,7 +94,7 @@ This document outlines the two types of analyses to be conducted:
 ---
 
 ### 8. Prompt Length or Complexity Effects
-**Goal:** Determine if longer/more detailed prompts correlate with performance.  
+**Goal:** Determine if longer/more detailed prompts correlate with performance. 
 **Instructions:**
 - Measure word or token length of each prompt.
 - Plot length vs accuracy per prompt.

@@ -1,108 +1,89 @@
 # Task 0: Molecule Identification Evaluation
 
-| Image                    | Prompt Type        | Model Answer (Summary)                                | Accuracy              |
-|---------------------------|--------------------|--------------------------------------------------------|-----------------------|
-| 1,2-dimethylbenzene.png   | Baseline            | Recognized ring but missed substitution                | ⚠️ Partially Correct  |
-| 1,2-dimethylbenzene.png   | Stepwise            | Confused or wrong structure                            | ❌ Incorrect          |
-| 1,2-dimethylbenzene.png   | Visual-first        | Recognized ring but missed substitution                | ⚠️ Partially Correct  |
-| 1,2-dimethylbenzene.png   | Explanation-first   | Recognized ring but missed substitution                | ⚠️ Partially Correct  |
-| 1,3-dimethylbenzene.png   | Baseline            | Recognized ring but missed substitution                | ⚠️ Partially Correct  |
-| 1,3-dimethylbenzene.png   | Stepwise            | Confused or wrong structure                            | ❌ Incorrect          |
-| 1,3-dimethylbenzene.png   | Visual-first        | Recognized ring but missed substitution                | ⚠️ Partially Correct  |
-| 1,3-dimethylbenzene.png   | Explanation-first   | Recognized ring but missed substitution                | ⚠️ Partially Correct  |
-| 1,4-dimethylbenzene.png   | Baseline            | Recognized ring but missed substitution                | ⚠️ Partially Correct  |
-| 1,4-dimethylbenzene.png   | Stepwise            | Confused or wrong structure                            | ❌ Incorrect          |
-| 1,4-dimethylbenzene.png   | Visual-first        | Recognized ring but missed substitution                | ⚠️ Partially Correct  |
-| 1,4-dimethylbenzene.png   | Explanation-first   | Recognized ring but missed substitution                | ⚠️ Partially Correct  |
-| Alkohol_benzylowy.png     | Baseline            | Recognized OH group but misclassified                  | ⚠️ Partially Correct  |
-| Alkohol_benzylowy.png     | Stepwise            | Recognized OH group but misclassified                  | ⚠️ Partially Correct  |
-| Alkohol_benzylowy.png     | Visual-first        | Recognized OH group but misclassified                  | ⚠️ Partially Correct  |
-| Alkohol_benzylowy.png     | Explanation-first   | Correctly recognized alcohol group                    | ✅ Correct             |
-| Aspartame.png             | Baseline            | Confused or wrong structure                            | ❌ Incorrect          |
-| Aspartame.png             | Stepwise            | Confused or wrong structure                            | ❌ Incorrect          |
-| Aspartame.png             | Visual-first        | Confused or wrong structure                            | ❌ Incorrect          |
-| Aspartame.png             | Explanation-first   | Confused or wrong structure                            | ❌ Incorrect          |
-| Butan_Lewis.png           | Baseline            | Confused or wrong structure                            | ❌ Incorrect          |
-| Butan_Lewis.png           | Stepwise            | Partial chain structure recognition                    | ⚠️ Partially Correct  |
-| Butan_Lewis.png           | Visual-first        | Recognized simple carbon chain                         | ✅ Correct             |
-| Butan_Lewis.png           | Explanation-first   | Partial chain structure recognition                    | ⚠️ Partially Correct  |
-| Butane_simple.png         | Baseline            | Confused or wrong structure                            | ❌ Incorrect          |
-| Butane_simple.png         | Stepwise            | Confused or wrong structure                            | ❌ Incorrect          |
-| Butane_simple.png         | Visual-first        | Partial chain structure recognition                    | ⚠️ Partially Correct  |
-| Butane_simple.png         | Explanation-first   | Partial chain structure recognition                    | ⚠️ Partially Correct  |
-| Carbon-dioxide.png        | Baseline            | Correctly identified CO₂                              | ✅ Correct             |
-| Carbon-dioxide.png        | Stepwise            | Confused or wrong structure                            | ❌ Incorrect          |
-| Carbon-dioxide.png        | Visual-first        | Correctly identified CO₂                              | ✅ Correct             |
-| Carbon-dioxide.png        | Explanation-first   | Partial chain structure recognition                    | ⚠️ Partially Correct  |
-| Cholesterol.png           | Baseline            | Confused or wrong structure                            | ❌ Incorrect          |
-| Cholesterol.png           | Stepwise            | Partial steroid structure recognized                   | ⚠️ Partially Correct  |
-| Cholesterol.png           | Visual-first        | Recognized steroid/lipid features                      | ✅ Correct             |
-| Cholesterol.png           | Explanation-first   | Recognized steroid/lipid features                      | ✅ Correct             |
-| Cortisol3.png             | Baseline            | Partial steroid structure recognized                   | ⚠️ Partially Correct  |
-| Cortisol3.png             | Stepwise            | Partial steroid structure recognized                   | ⚠️ Partially Correct  |
-| Cortisol3.png             | Visual-first        | Recognized steroid/lipid features                      | ✅ Correct             |
-| Cortisol3.png             | Explanation-first   | Recognized steroid/lipid features                      | ✅ Correct             |
-| Furan-numbered.png        | Baseline            | Confused or wrong structure                            | ❌ Incorrect          |
-| Furan-numbered.png        | Stepwise            | Partial steroid structure recognized                   | ⚠️ Partially Correct  |
-| Furan-numbered.png        | Visual-first        | Correctly described furan features                     | ✅ Correct             |
-| Furan-numbered.png        | Explanation-first   | Correctly described furan features                     | ✅ Correct             |
-| Guanin.png                | Baseline            | Confused or wrong structure                            | ❌ Incorrect          |
-| Guanin.png                | Stepwise            | Partial nucleobase recognition                         | ⚠️ Partially Correct  |
-| Guanin.png                | Visual-first        | Correctly identified nucleobase features               | ✅ Correct             |
-| Guanin.png                | Explanation-first   | Correctly identified nucleobase features               | ✅ Correct             |
-| Hydrogen-chloride.png     | Baseline            | Confused or wrong structure                            | ❌ Incorrect          |
-| Hydrogen-chloride.png     | Stepwise            | Confused or wrong structure                            | ❌ Incorrect          |
-| Hydrogen-chloride.png     | Visual-first        | Partial chain structure recognition                    | ⚠️ Partially Correct  |
-| Hydrogen-chloride.png     | Explanation-first   | Correctly identified H-Cl bond                         | ✅ Correct             |
-| Phenol2.png               | Baseline            | Confused or wrong structure                            | ❌ Incorrect          |
-| Phenol2.png               | Stepwise            | Partial chain structure recognition                    | ⚠️ Partially Correct  |
-| Phenol2.png               | Visual-first        | Correctly recognized alcohol group                    | ✅ Correct             |
-| Phenol2.png               | Explanation-first   | Correctly recognized alcohol group                    | ✅ Correct             |
-| Propane-Full.png          | Baseline            | Confused or wrong structure                            | ❌ Incorrect          |
-| Propane-Full.png          | Stepwise            | Partial chain structure recognition                    | ⚠️ Partially Correct  |
-| Propane-Full.png          | Visual-first        | Recognized simple carbon chain                         | ✅ Correct             |
-| Propane-Full.png          | Explanation-first   | Recognized simple carbon chain                         | ✅ Correct             |
-| Propane-Skeletal.png      | Baseline            | Confused or wrong structure                            | ❌ Incorrect          |
-| Propane-Skeletal.png      | Stepwise            | Confused or wrong structure                            | ❌ Incorrect          |
-| Propane-Skeletal.png      | Visual-first        | Recognized simple carbon chain                         | ✅ Correct             |
-| Propane-Skeletal.png      | Explanation-first   | Recognized simple carbon chain                         | ✅ Correct             |
-| Thiophene-numbered.png    | Baseline            | Confused or wrong structure                            | ❌ Incorrect          |
-| Thiophene-numbered.png    | Stepwise            | Partial steroid structure recognized                   | ⚠️ Partially Correct  |
-| Thiophene-numbered.png    | Visual-first        | Correctly described thiophene ring                     | ✅ Correct             |
-| Thiophene-numbered.png    | Explanation-first   | Correctly described thiophene ring                     | ✅ Correct             |
-| Thymine.png               | Baseline            | Confused or wrong structure                            | ❌ Incorrect          |
-| Thymine.png               | Stepwise            | Partial nucleobase recognition                         | ⚠️ Partially Correct  |
-| Thymine.png               | Visual-first        | Correctly identified nucleobase features               | ✅ Correct             |
-| Thymine.png               | Explanation-first   | Correctly identified nucleobase features               | ✅ Correct             |
-| Tryptophan.png         | Baseline           | Misidentified as amine compound (Aspartic acid)      | ❌ Incorrect          |
-| Tryptophan.png         | Stepwise           | Recognized partial features, failed to conclude      | ⚠️ Partially Correct  |
-| Tryptophan.png         | Visual-first       | Recognized indole-like shape, no full conclusion     | ⚠️ Partially Correct  |
-| Tryptophan.png         | Explanation-first  | Misidentified as Phenylalanine                       | ❌ Incorrect          |
+#### Scoring Examples
 
----
+**Example 1**
 
-## Overview
+> *Visual-First CoT:* “The molecule is likely a steroid. Steroids have four fused rings and a hydroxyl group may suggest identity. However, without more details, it's hard to specify the exact type.”
 
-This evaluation focused on the model's ability to **identify molecules** purely from images, across **four prompt types**:
-- Baseline
-- Stepwise
-- Visual-first
-- Explanation-first
+- **Accuracy:** 1.5 (correct family + features)
+- **Hedging:** 1 (includes “likely”, “without more details”)
 
-Each of the 19 molecules was tested under these prompts. The results were scored as:
-- ✅ Correct = 2
-- ⚠️ Partially Correct = 1
-- ❌ Incorrect = 0
+**Example 2**
 
-## 📈 Accuracy Summary (After Finetuned Prompts)
+> *Baseline:* “This is 2-nitrobenzaldehyde.”
 
-| Accuracy Level         | Count |
-|-------------------------|-------|
-| ✅ Correct              | 39    |
-| ⚠️ Partially Correct    | 28    |
-| ❌ Incorrect            | 9     |
+- **Accuracy:** 0.5 (wrong molecule but recognized benzene and nitro group)
+- **Hedging:** 0 (direct claim)
 
----
+------
+
+### CoT Structure Evaluation Summary
+
+We evaluated 129 total outputs across three models (DeepSeek-VL, LLaVA-Med, and LLaVA-OneVision), using four prompt structures per image:
+
+- **Baseline**
+- **Stepwise**
+- **Visual-first**
+- **Explanation-first**
+
+| Accuracy Score | Baseline | Stepwise | Visual-first | Explanation-first |
+| -------------- | -------- | -------- | ------------ | ----------------- |
+| 0              | 44       | 17       | 18           | 35                |
+| 0.5            | 48       | 61       | 45           | 42                |
+| 1.0            | 26       | 41       | 46           | 27                |
+| 1.5            | 8        | 10       | 17           | 20                |
+| 2.0            | 3        | 3        | 3            | 5                 |
+
+#### Key Observations
+
+- **CoT significantly reduces failure rates.**
+   Baseline prompts resulted in 0 scores 34% of the time, whereas CoT-based prompts never exceeded 27.1% 0 scores.
+- **Visual-first offers the best overall balance.**
+   It produced both a high proportion of partial (0.5–1.0) and high (1.5–2.0) scores, suggesting it encourages structure-focused recognition.
+- **Explanation-first excels at high-scoring cases** but suffers instability — it achieved the highest share of 1.5/2.0 scores (19.4%) but also the most 0s.
+- **Stepwise prompts are robust for partial credit**, producing the highest overall non-zero rate, though it tends to plateau at 0.5.
+
+------
+
+### Model-by-Model Analysis
+
+#### LLaVA-Med
+
+- **Performance:** Weaker overall than other models.
+- **Strengths:** Some success in stepwise prompts.
+- **Explanation-first instability:** The highest 0-score rate among CoTs (~50%).
+  - This may stem from **prompt length** and **recency bias**, where the model forgets final instructions due to long context length.
+- **Visual-first remains most reliable**, with stable performance across score bands.
+- **Hedging:** CoT prompts introduce uncertainty effectively; baseline answers were overly confident and often wrong.
+
+#### DeepSeek-VL
+
+- **Performance:** Best-performing model overall.
+- **Lowest 0-score rate** among all models, even for the baseline.
+- **Explanation-first shines here**, with strong performance in high-score bands and minimal 0 scores.
+  - Indicates DeepSeek-VL handles **long prompts and complex logic** better than LLaVA-Med.
+- **Visual-first again performs reliably**, balancing mid-to-high scores.
+- **Stepwise ranks lowest among CoTs**, due to limited depth of recognition.
+
+#### LLaVA-OneVision
+
+- **Sample Size:** Only 19 images tested.
+- **No perfect scores (2.0)** recorded, suggesting underperformance.
+- **Visual-first leads again** with the best balance, but no standout CoT structure.
+- **Hedging behavior is strong by default**, with even baseline prompts frequently using uncertainty language.
+
+------
+
+### Final Recommendation
+
+| Model       | Best CoT Structure | Comment                                            |
+| ----------- | ------------------ | -------------------------------------------------- |
+| LLaVA-Med   | Visual-first       | More stable; explanation-first too unstable        |
+| DeepSeek-VL | Explanation-first  | Handles long prompts and deductive logic well      |
+| OneVision   | Visual-first       | Best of a narrow range; overall performance weaker |
+
+In conclusion, **finetuned CoT prompts improve performance** across models, especially for **Visual-first** and **Explanation-first** formats. Visual-first is the most stable overall, while explanation-first can excel in capable models like DeepSeek-VL. Stepwise prompts offer consistent partial accuracy but rarely full recognition.
 
 ## General Observations
 
@@ -189,7 +170,7 @@ Correct CoT structure **alone** is **not sufficient** — models **need deeper c
 
 ---
 
-# 📊 Quick Performance Comparison: Before vs After Finetuning
+#  Quick Performance Comparison: Before vs After Finetuning
 
 | Metric | Before Finetuning | After Finetuning |
 |:-------|:------------------|:-----------------|
@@ -199,7 +180,7 @@ Correct CoT structure **alone** is **not sufficient** — models **need deeper c
 
 ---
 
-# ✨ Final Verdict
+#  Final Verdict
 
-**Finetuned prompting worked.**  
+**Finetuned prompting worked.** 
 It **did not make the model perfect**, but it **increased the chance of the model finding the correct or nearly correct molecule** — a meaningful step toward smarter multimodal scientific reasoning.

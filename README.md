@@ -1,10 +1,10 @@
-# 🧪 Chain-of-Thought Prompting for Chemistry Reasoning in VLMs
+# Chain-of-Thought Prompting for Chemistry Reasoning in VLMs
 
 This project investigates how different Chain-of-Thought (CoT) prompting structures affect the reasoning abilities of state-of-the-art vision-language models (VLMs) on a suite of chemistry-focused image-based tasks.
 
 ---
 
-## 📌 Project Objectives
+## Project Objectives
 
 We systematically evaluate:
 
@@ -16,23 +16,23 @@ We systematically evaluate:
 
 ---
 
-## 📦 Deliverables
+## Deliverables
 
-- **✅ Prompt Set**  
+- **Prompt Set** 
   A curated collection of prompts (baseline and CoT) for five chemistry tasks.
 
-- **✅ Inference Results**  
+- **Inference Results** 
   Model outputs for each prompt-task-model combination, stored as structured `.csv` files.
 
-- **✅ Graded Dataset**  
+- **Graded Dataset** 
   Human-annotated scores (0–2) for all model outputs, including qualitative notes on reasoning.
 
-- **✅ Data Analysis Report**  
+- **Data Analysis Report**  
   - Accuracy comparisons across models and prompt types  
   - Identification of effective prompt structures  
   - Observations on task complexity and model robustness
 
-- **✅ Findings and Recommendations**  
+- **Findings and Recommendations** 
   Summary discussion on:
   - How CoT prompting influences multimodal scientific reasoning
   - Common reasoning failures and speculation patterns
@@ -40,14 +40,14 @@ We systematically evaluate:
 
 ---
 
-## ⚙️ Setup Overview
+## Setup Overview
 
-### 🔍 Models Evaluated
+### Models Evaluated
 - `LLaVA-OneVision`  
 - `LLaVA-Med` (v1.5 Mistral, biomedical)  
 - `DeepSeek-VL` (multilingual vision-language model)
 
-### 🧪 Tasks (for each model)
+### Tasks (for each model)
 | Task ID | Task Description |
 |---------|------------------|
 | Task 0  | Molecule identification |
@@ -56,13 +56,28 @@ We systematically evaluate:
 | Task 3  | Nucleophilicity (functional group reactivity) |
 | Task 4  | SN1 reaction likelihood |
 
-### 💬 Prompt Structures
+### Prompt Structures
 - `Baseline` (no CoT)
 - `Stepwise`
 - `Visual-first`
 - `Explanation-first`
 
-### 🧮 Scoring Rubric
+### Scoring Rubric
+
+#### Task 0-1
+
+| Score   | Accuracy                                                     | Hedging                                              |
+| ------- | ------------------------------------------------------------ | ---------------------------------------------------- |
+| **0**   | Completely incorrect or irrelevant output; no meaningful understanding of chemical structure or reactivity; | Strongly certain language (no hedging)               |
+| **0.5** | Partially correct: identifies a few relevant features or weakly related reasoning (e.g., spot one group but no link to outcome); the conclusion is mostly incorrect | —                                                    |
+| **1.0** | Moderately correct: identifies key structural or chemical factors and shows some reasoning (e.g., EAS direction based on activating groups), but overall prediction or name is incorrect | Uses uncertainty expressions (e.g., "may", "likely") |
+| **1.5** | Mostly correct: captures most important structures or chemical logic, shows sound step-by-step analysis or comparison, but final output still has minor flaws or imperfect judgment | —                                                    |
+| **2.0** | Fully correct; names or predicts correctly with chemically accurate justification; | —                                                    |
+
+#### Task 2-4
+
+Due to time constraints, we evaluate Task 2–4 using a simplified scoring scheme with fewer grading categories.
+
 | Score | Meaning |
 |-------|---------|
 | 0     | Incorrect or off-topic answer |
@@ -71,19 +86,18 @@ We systematically evaluate:
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 .
 ├──Analysis/      # store all result evaluations & analysis guideline doc
 │   ├── Analysis_Design_Doc.md
-│   ├── Task0_1V_EvalRes.md
+│   ├── Task0_EvalRes.md
 │   ├── Task1_EvalRes.md
 │   ├── Task2_EvalRes.md
 │   ├── Task3_EvalRes.md
 │   └── Task4_EvalRes.md
 ├── Dataset/      # stores all images in .png
-│   ├── All
 │   ├── Task0
 │   ├── Task1
 │   ├── Task2
