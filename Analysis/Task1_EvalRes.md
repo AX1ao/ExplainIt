@@ -53,10 +53,11 @@
 
 | Prompt Type           | Avg Score (/2) |
 | --------------------- | -------------- |
-| Stepwise              | 1.1            |
-| Baseline              | 0.9            |
-| Visual-first          | 0.5            |
-| Explanation-first     | 0.25           |
+| **Explanation-first** | **1.0**        |
+| Stepwise          | 0.85           |
+| Baseline          | 0.85           |
+| Visual-first      | 0.55           |
+
 
 ---
 ## LLaVA Med
