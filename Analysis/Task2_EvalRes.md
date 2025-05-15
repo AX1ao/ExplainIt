@@ -274,3 +274,14 @@
 | Imidazole vs Pyridine     | 0        | 1        | 0      | 2           |
 | Nicotinamide vs Histamine | 0        | 1        | 0      | 2           |
 | Purine vs Uracil          | 0        | 0        | 0      | 2           |
+
+### 📊 Prompt Type Effectiveness (Average Score)
+
+| Prompt Type      | Average Score (/2) |
+| ---------------- | ------------------ |
+| **Explanation**  | 1.80               |
+| **Stepwise**     | 1.05               |
+| **Baseline**     | 0.80               |
+| **Visual-first** | 0.45               |
+
+

@@ -6,8 +6,9 @@
 
 ### Two-way Summary Table
 
-| Image Pair                   | Baseline | Stepwise | Visual | Explanation |
-| ---------------------------- | -------- | -------- | ------ | ----------- |
+
+| Image Pair                    | Baseline | Stepwise | Visual | Explanation |
+|------------------------------|----------|----------|--------|-------------|
 | Aniline vs Nitrobenzene      | 1        | 0        | 0      | 1           |
 | Benzene vs Toluene           | 1        | 1.5      | 1.5    | 1.5         |
 | Benzaldehyde vs Benzoic Acid | 1        | 0        | 0.5    | 0.5         |
@@ -73,7 +74,7 @@
 |           Benzene vs Toluene | Baseline          |     1 | Correct answer but lacks justification         |
 |           Benzene vs Toluene | Stepwise          |     1 | Correct answer but lacks justification         |
 |           Benzene vs Toluene | Visual_first      |   0.5 | Mentions some structure but unclear conclusion |
-|           Benzene vs Toluene | Explanation_first |   1.5 | Correct answer with partial explanation        |
+|           Benzene vs Toluene | Explanation_first |   1.5 | Correct answer with partial explanation       |
 | Benzaldehyde vs Benzoic_acid | Baseline          |     1 | Correct answer but lacks justification         |
 | Benzaldehyde vs Benzoic_acid | Stepwise          |     1 | Correct answer but lacks justification         |
 | Benzaldehyde vs Benzoic_acid | Visual_first      |   0.5 | Mentions some structure but unclear conclusion |
@@ -109,18 +110,18 @@
 
 ### Two-way Summary Table
 
-| Image Pair                        | Baseline | Stepwise | Visual | Explanation |
-| --------------------------------- | -------- | -------- | ------ | ----------- |
-| Aniline vs Nitrobenzene           | 1        | 1        | 0.5    | 1           |
-| Benzene vs Toluene                | 1        | 1        | 0.5    | 1.5         |
-| Benzaldehyde vs Benzoic_acid      | 1        | 1        | 0.5    | 0.5         |
-| Pyridine-full vs Benzene          | 1        | 1        | 0.5    | 0.5         |
-| Pyrrole-full vs Benzene           | 1        | 1        | 0.5    | 1.5         |
-| Phenol vs Benzene                 | 1        | 1        | 0.5    | 0.5         |
-| Salicylic-acid vs Benzoic_acid    | 1        | 1        | 0.5    | 0.5         |
-| Nitrobenzene vs Ozone             | 0        | 1        | 0.5    | 1.5         |
-| Pyrrole-numbered vs Pyridine-full | 1        | 1        | 0.5    | 0.5         |
-| Morphine vs Caffeine              | 1        | 1        | 0.5    | 1.5         |
+| Image Pair                          | Baseline | Stepwise | Visual | Explanation |
+|------------------------------------|----------|----------|--------|-------------|
+| Aniline vs Nitrobenzene            | 1        | 1        | 0.5    | 1           |
+| Benzene vs Toluene                 | 1        | 1        | 0.5    | 1.5         |
+| Benzaldehyde vs Benzoic_acid       | 1        | 1        | 0.5    | 0.5         |
+| Pyridine-full vs Benzene           | 1        | 1        | 0.5    | 0.5         |
+| Pyrrole-full vs Benzene            | 1        | 1        | 0.5    | 1.5         |
+| Phenol vs Benzene                  | 1        | 1        | 0.5    | 0.5         |
+| Salicylic-acid vs Benzoic_acid     | 1        | 1        | 0.5    | 0.5         |
+| Nitrobenzene vs Ozone              | 0        | 1        | 0.5    | 1.5         |
+| Pyrrole-numbered vs Pyridine-full  | 1        | 1        | 0.5    | 0.5         |
+| Morphine vs Caffeine               | 1        | 1        | 0.5    | 1.5         |
 
 ---
 
@@ -240,9 +241,9 @@
 
 ### Prompt Type Effectiveness (Average Score Comparison)
 
-| Prompt Type       | Avg Score (/2) | Count of 2.0 Scores |
-| ----------------- | -------------- | ------------------- |
-| Stepwise          | 1.20           | 2                   |
-| Baseline          | 1.20           | 0                   |
-| Explanation-first | 0.90           | 0                   |
-| Visual-first      | 0.65           | 0                   |
+| Prompt Type         | Avg Score (/2) | Count of 2.0 Scores |
+| ------------------- | -------------- | ------------------- |
+| Stepwise            | 1.20           | 2                   |
+| Baseline            | 1.20           | 0                   |
+| Explanation-first   | 0.90           | 0                   |
+| Visual-first        | 0.65           | 0                   |
