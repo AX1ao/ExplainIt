@@ -1,8 +1,6 @@
 # Chain-of-Thought Prompting for Chemistry Reasoning in VLMs
 
-This project investigates how different Chain-of-Thought (CoT) prompting structures affect the reasoning abilities of state-of-the-art vision-language models (VLMs) on a suite of chemistry-focused image-based tasks.
-
----
+**This project investigates how different Chain-of-Thought (CoT) prompting structures affect the reasoning abilities of state-of-the-art vision-language models (VLMs) on a suite of chemistry-focused image-based tasks.**
 
 ## Project Objectives
 
@@ -13,8 +11,6 @@ We systematically evaluate:
 - **Task-specific performance** across five types of chemistry reasoning, from visual recognition to mechanistic inference.
 - **Output accuracy and reasoning quality** using a human-rated rubric (0 = incorrect, 1 = partial, 2 = correct), allowing consistent scoring across prompts, tasks, and models.
 - **Trends and failure modes**, identifying which CoT formats and models produce reliable scientific reasoning and which fall back on heuristics or hallucinations.
-
----
 
 ## Deliverables
 
@@ -43,9 +39,9 @@ We systematically evaluate:
 ## Setup Overview
 
 ### Models Evaluated
-- `LLaVA-OneVision`  
-- `LLaVA-Med` (v1.5 Mistral, biomedical)  
-- `DeepSeek-VL` (multilingual vision-language model)
+- [LLaVA-OneVision](https://huggingface.co/llava-hf/llava-onevision-qwen2-7b-ov-hf)
+- [LLaVA-Med](https://huggingface.co/microsoft/llava-med-v1.5-mistral-7b)  (v1.5 Mistral, biomedical)
+- [DeepSeek-VL](https://huggingface.co/deepseek-ai/deepseek-vl2) (multilingual vision-language model)
 
 ### Tasks (for each model)
 | Task ID | Task Description |
@@ -57,10 +53,10 @@ We systematically evaluate:
 | Task 4  | SN1 reaction likelihood |
 
 ### Prompt Structures
-- `Baseline` (no CoT)
-- `Stepwise`
-- `Visual-first`
-- `Explanation-first`
+- Baseline (no CoT)
+- Stepwise
+- Visual-first
+- Explanation-first
 
 ### Scoring Rubric
 
@@ -109,6 +105,7 @@ Due to time constraints, we evaluate Task 2–4 using a simplified scoring schem
 │   ├── Task2
 │   ├── Task3
 │   └── Task4
+|   └── all_statistics_visualization.ipynb
 ├── Scripts/      # stores all .py code scripts for finetuning prompts and running tasks on models
 │   ├── Task0
 │   ├── Task1
@@ -123,8 +120,8 @@ Due to time constraints, we evaluate Task 2–4 using a simplified scoring schem
 │   ├── 4_SN1SN2.md
 │   ├── meta.csv
 │   └── pair_list.csv
-├── Img/       # figures
-│   ├── ...
+├── Img/       # all visualization figures
+│   ...
 ├── .gitignore
 └── README.md
 ```
