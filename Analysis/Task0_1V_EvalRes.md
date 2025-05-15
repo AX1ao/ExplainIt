@@ -1,5 +1,22 @@
 # Task 0: Molecule Identification Evaluation
+### CoT Structure Evaluation Summary
 
+We evaluated 129 total outputs across three models (DeepSeek-VL, LLaVA-Med, and LLaVA-OneVision), using four prompt structures per image:
+
+- **Baseline**
+- **Stepwise**
+- **Visual-first**
+- **Explanation-first**
+
+| Accuracy Score | Baseline | Stepwise | Visual-first | Explanation-first |
+| -------------- | -------- | -------- | ------------ | ----------------- |
+| 0              | 44       | 17       | 18           | 35                |
+| 0.5            | 48       | 61       | 45           | 42                |
+| 1.0            | 26       | 41       | 46           | 27                |
+| 1.5            | 8        | 10       | 17           | 20                |
+| 2.0            | 3        | 3        | 3            | 5                 |
+
+**Due to the volume of scoring data, individual scores for each image-model-prompt combination are not listed here. Full results can be found in the supplementary Excel file located at `Results/Task0/`, which includes detailed scoring breakdowns across all models and prompt types.**
 #### Scoring Examples
 
 **Example 1**
@@ -18,24 +35,7 @@
 
 ------
 
-### CoT Structure Evaluation Summary
-
-We evaluated 129 total outputs across three models (DeepSeek-VL, LLaVA-Med, and LLaVA-OneVision), using four prompt structures per image:
-
-- **Baseline**
-- **Stepwise**
-- **Visual-first**
-- **Explanation-first**
-
-| Accuracy Score | Baseline | Stepwise | Visual-first | Explanation-first |
-| -------------- | -------- | -------- | ------------ | ----------------- |
-| 0              | 44       | 17       | 18           | 35                |
-| 0.5            | 48       | 61       | 45           | 42                |
-| 1.0            | 26       | 41       | 46           | 27                |
-| 1.5            | 8        | 10       | 17           | 20                |
-| 2.0            | 3        | 3        | 3            | 5                 |
-
-#### Key Observations
+### Key Observations
 
 - **CoT significantly reduces failure rates.**
    Baseline prompts resulted in 0 scores 34% of the time, whereas CoT-based prompts never exceeded 27.1% 0 scores.
@@ -44,7 +44,57 @@ We evaluated 129 total outputs across three models (DeepSeek-VL, LLaVA-Med, and 
 - **Explanation-first excels at high-scoring cases** but suffers instability — it achieved the highest share of 1.5/2.0 scores (19.4%) but also the most 0s.
 - **Stepwise prompts are robust for partial credit**, producing the highest overall non-zero rate, though it tends to plateau at 0.5.
 
-------
+## Detailed Scoring Information
+### Deepseek-VL
+#### Accuracy by Prompt Type
+| Prompt Type | 0  | 0.5 | 1  | 1.5 | 2 | Total |
+| ----------- | -- | --- | -- | --- | - | ----- |
+| Baseline    | 11 | 24  | 14 | 4   | 2 | 55    |
+| Stepwise    | 8  | 21  | 19 | 6   | 1 | 55    |
+| Visual      | 8  | 12  | 25 | 8   | 2 | 55    |
+| Explanation | 6  | 15  | 19 | 11  | 4 | 55    |
+
+#### Hedging by Prompt Type
+| Prompt Type | Hedging = 0 | Hedging = 1 | Total |
+| ----------- | ----------- | ----------- | ----- |
+| Baseline    | 54          | 1           | 55    |
+| Stepwise    | 19          | 36          | 55    |
+| Visual      | 22          | 33          | 55    |
+| Explanation | 31          | 24          | 55    |
+
+### LLaVA-Med
+#### Accuracy by Prompt Type
+| Prompt Type | 0  | 0.5 | 1  | 1.5 | 2 | Total |
+| ----------- | -- | --- | -- | --- | - | ----- |
+| Baseline    | 29 | 13  | 9  | 4   | 0 | 55    |
+| Stepwise    | 8  | 26  | 15 | 4   | 2 | 55    |
+| Visual      | 9  | 21  | 18 | 6   | 1 | 55    |
+| Explanation | 28 | 13  | 5  | 8   | 1 | 55    |
+
+#### Hedging by Prompt Type
+| Prompt Type | Hedging = 0 | Hedging = 1 | Total |
+| ----------- | ----------- | ----------- | ----- |
+| Baseline    | 55          | 0           | 55    |
+| Stepwise    | 31          | 24          | 55    |
+| Visual      | 26          | 29          | 55    |
+| Explanation | 31          | 24          | 55    |
+
+### OneVision
+#### Accuracy by Prompt Type
+| Prompt Type | 0 | 0.5 | 1 | 1.5 | 2 | Total |
+| ----------- | - | --- | - | --- | - | ----- |
+| Baseline    | 4 | 11  | 3 | 0   | 1 | 19    |
+| Stepwise    | 1 | 11  | 7 | 0   | 0 | 19    |
+| Visual      | 1 | 12  | 3 | 3   | 0 | 19    |
+| Explanation | 1 | 14  | 3 | 1   | 0 | 19    |
+
+#### Hedging by Prompt Type
+| Prompt Type | Hedging = 0 | Hedging = 1 | Total |
+| ----------- | ----------- | ----------- | ----- |
+| Baseline    | 2           | 17          | 19    |
+| Stepwise    | 0           | 19          | 19    |
+| Visual      | 0           | 19          | 19    |
+| Explanation | 0           | 19          | 19    |
 
 ### Model-by-Model Analysis
 
@@ -112,39 +162,6 @@ In conclusion, **finetuned CoT prompts improve performance** across models, espe
   - **Hydrogen-chloride.png**: Simple diatomic structure still misdescribed under several prompts.
   - **Butane_simple.png**: Overinterpreted into zigzag or polymeric structures.
 
----
-
-## Detailed Insights by Category
-
-### 1. Correct Identifications (✅)
-
-Correct outputs often involved:
-- Clear **visual patterns** (e.g., double bonds, aromatic rings).
-- **Visual-first** prompts improving model attention to spatial arrangement.
-- **Explanation-first** prompts correctly anchoring observed structures to chemical knowledge after finetuning.
-
-Finetuned prompts helped **Visual-first** and **Explanation-first** especially.
-
-### 2. Partial Identifications (⚠️)
-
-Partial answers were seen when:
-- General **shapes or rings were described correctly**, but specific groupings were wrong.
-- Stepwise prompts walked through features but **faltered at final naming**.
-- Functional groups were **missed or misnamed** despite good general layout understanding.
-
-Stepwise prompts remained **decent at reasoning but weak at final classification**.
-
-### 3. Incorrect Identifications (❌)
-
-Mistakes still included:
-- **Hallucinated complex structures** for simple molecules.
-- **Confused similar groups** (e.g., ketones, alcohols, amines).
-- **Overgeneralized** from visible features without domain knowledge.
-
-Baseline prompts remained unreliable unless the molecule was **extremely simple**.
-
----
-
 ## Prompt Type Performance Summary
 
 | Prompt Type      | Strengths | Weaknesses |
@@ -154,7 +171,6 @@ Baseline prompts remained unreliable unless the molecule was **extremely simple*
 | **Visual-first** | **Much better** after finetuning; stronger at recognizing rings, bond patterns | Still some issues with functional group specificity |
 | **Explanation-first** | **Significantly improved** chemical logic; better group identification | Occasionally too verbose or overcomplicated |
 
----
 
 ## Final Reflection
 
@@ -168,9 +184,8 @@ Compared to the earlier raw prompts:
 **However**, the model still **struggles to bridge vision and domain-specific chemical naming**.  
 Correct CoT structure **alone** is **not sufficient** — models **need deeper chemical grounding** to move beyond surface features.
 
----
 
-#  Quick Performance Comparison: Before vs After Finetuning
+##  Quick Performance Comparison: Before vs After Finetuning
 
 | Metric | Before Finetuning | After Finetuning |
 |:-------|:------------------|:-----------------|
@@ -178,9 +193,8 @@ Correct CoT structure **alone** is **not sufficient** — models **need deeper c
 | Best Prompt Type | None clearly better | Visual-first and Explanation-first |
 | Failure Mode | Random misidentifications | More focused, near-correct attempts |
 
----
 
-#  Final Verdict
+##  Final Verdict
 
 **Finetuned prompting worked.** 
 It **did not make the model perfect**, but it **increased the chance of the model finding the correct or nearly correct molecule** — a meaningful step toward smarter multimodal scientific reasoning.
