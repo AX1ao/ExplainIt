@@ -1,4 +1,4 @@
-# 🧪 LLaVA Prompt Evaluation – Analysis Design Doc
+# LLaVA Prompt Evaluation – Analysis Design Doc
 
 This document outlines the two types of analyses to be conducted:
 
@@ -10,7 +10,7 @@ This document outlines the two types of analyses to be conducted:
 
 ---
 
-## ✅ Part I. Rigorous, Benchmark-Based Analyses
+## Part I. Rigorous, Benchmark-Based Analyses
 
 ### 1. Patterns in the "Best" Prompts
 **Goal:** Identify if there are structural consistencies among top-performing prompts.  
@@ -45,7 +45,7 @@ This document outlines the two types of analyses to be conducted:
 
 ---
 
-## 🧩 Part II. Exploratory, Emergent Analyses
+## Part II. Exploratory, Emergent Analyses
 
 ### 4. Prompt Robustness Across Tasks
 **Goal:** Identify CoT types that generalize across task types.
@@ -96,6 +96,7 @@ This document outlines the two types of analyses to be conducted:
 ### 8. Prompt Length or Complexity Effects
 **Goal:** Determine if longer/more detailed prompts correlate with performance. 
 **Instructions:**
+
 - Measure word or token length of each prompt.
 - Plot length vs accuracy per prompt.
 - Optionally split by CoT type.
@@ -103,7 +104,7 @@ This document outlines the two types of analyses to be conducted:
 
 ---
 
-## 📌 Suggested Report Structure
+## Suggested Report Structure
 
 ### Results (Backed by Data)
 - Part I.1 – Patterns in Best Prompts
